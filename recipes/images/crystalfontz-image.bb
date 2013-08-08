@@ -2,6 +2,7 @@ DESCRIPTION = "Image for Crystalfontz boards"
 
 IMAGE_INSTALL = "packagegroup-core-boot ${ROOTFS_PKGMANAGE_BOOTSTRAP} ${CORE_IMAGE_EXTRA_INSTALL}"
 
+IMAGE_INSTALL += "kernel-image kernel-devicetree"
 
 IMAGE_INSTALL += "python-core"
 
