@@ -10,7 +10,7 @@ require recipes-kernel/linux/linux-dtb.inc
 SRC_URI = "git://github.com/crystalfontz/cfa_10036_kernel \
            file://defconfig"
 
-SRCREV = "552d876f4737ffeb18c9139ede3c439bdcafca94"
+SRCREV = "56025c8d9d3e8651633e01e8fe6b73ad6c6c378f"
 
 S = "${WORKDIR}/git"
 
@@ -26,8 +26,7 @@ pkg_postinst_kernel-devicetree_append () {
 }
 
 pkg_postinst_kernel-image_append () {
-	update-alternatives --install /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${MACHINE} ${KERNEL_IMAGETYPE}-${MACHINE} ${KERNEL_IMAGETYPE}-${KERNEL_VERSION} ${KERNEL_PRIORITY} || true
+	update-alternatives --install /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-cfa10036 ${KERNEL_IMAGETYPE}-cfa10036 ${KERNEL_IMAGETYPE}-${KERNEL_VERSION} ${KERNEL_PRIORITY} || true
 }
 
-COMPATIBLE_MACHINE = "cfa10036"
-
+COMPATIBLE_MACHINE = "cfa10036|cfa10037|cfa10049|cfa10055|cfa10056|cfa10057|cfa10058"
