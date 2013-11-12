@@ -1,0 +1,23 @@
+cfa10057: add temporary calibration data to be able to fully calibrate
+
+Upstream-Status: Inappropriate [configuration]
+
+Signed-off-by: Alexandre Belloni <alexandre.belloni@free-electrons.com>
+---
+ config/10-evdev.conf | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/config/10-evdev.conf b/config/10-evdev.conf
+index cc83ab2..4afcfd7 100644
+--- a/config/10-evdev.conf
++++ b/config/10-evdev.conf
+@@ -37,4 +37,6 @@ Section "InputClass"
+         MatchIsTouchscreen "on"
+         MatchDevicePath "/dev/input/event*"
+         Driver "evdev"
++        Option "Calibration" "185 4074 285 3946"
++        Option "SwapAxes" "1"
+ EndSection
+--
+1.8.1.2
+
