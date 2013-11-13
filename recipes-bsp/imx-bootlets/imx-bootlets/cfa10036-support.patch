@@ -68,16 +68,3 @@ index 19b02a9..b33e4c1 100644
  # Generic code
  CORE_OBJS = entry.o resume.o cmdlines.o setup.o keys.o
 
-diff --git a/linux_prep/include/mx28/platform.h b/linux_prep/include/mx28/platform.h
-index d4063f8..3d1f1d7 100644
---- a/linux_prep/include/mx28/platform.h
-+++ b/linux_prep/include/mx28/platform.h
-@@ -19,6 +19,8 @@
- 
- #if defined (BOARD_MX28_EVK)
- #define	MACHINE_ID	2531
-+#elif defined (BOARD_CFA10036)
-+#define	MACHINE_ID	4142
- #else
- #error "Allocate a machine ID for your board"
- #endif
