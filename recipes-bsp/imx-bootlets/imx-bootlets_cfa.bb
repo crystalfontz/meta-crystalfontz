@@ -6,7 +6,6 @@ PR = "r1"
 
 SRC_URI = "git://github.com/crystalfontz/bootlets.git \
 		   file://barebox-fix-paths.patch \
-		   file://cfa10036-support.patch \
 		  "
 SRCREV = "03bfdef0fa7efc6b64392e3eebfaf688018751cc"
 
