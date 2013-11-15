@@ -12,5 +12,5 @@ IMAGE_LINGUAS = " "
 
 LICENSE = "MIT"
 
-inherit core-image-mono-sdk
+inherit core-image-sato
 
