@@ -1,13 +1,32 @@
-DESCRIPTION = "Image for Crystalfontz boards"
-LICENSE = "MIT"
+include recipes-sato/images/core-image-sato.bb
 
-IMAGE_FEATURES += "splash package-management x11-base x11-sato ssh-server-dropbear hwcodecs"
-
-inherit core-image
+IMAGE_FEATURES += "debug-tweaks"
+WEB = "web-webkit"
 
 IMAGE_INSTALL += " init-ifupdown busybox-udhcpd"
 
-IMAGE_INSTALL += "packagegroup-core-x11-sato-games"
+# we don't need the full tools-testapps
+IMAGE_INSTALL += " evtest tslib tslib-conf tslib-tests tslib-calibrate xev"
+IMAGE_INSTALL += " connman-client"
 
-IMAGE_INSTALL += " evtest tslib tslib-conf tslib-tests tslib-calibrate tzdata xev"
+EXTRA_IMAGE_FEATURES += " \
+    nfs-server \
+    qt4-pkgs \
+"
 
+# more debugging and profiling
+EXTRA_IMAGE_FEATURES += " \
+    tools-debug \
+    tools-profile \
+"
+
+IMAGE_INSTALL += " \
+    cpufrequtils \
+    nano \
+    packagegroup-qt-in-use-demos \
+    qt4-demos \
+    qt4-examples \
+    cfa-config-extra \
+    "
+
+export IMAGE_BASENAME = "demo-image-cfa"
