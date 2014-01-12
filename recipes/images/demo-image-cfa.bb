@@ -7,7 +7,7 @@ IMAGE_INSTALL += " linux-firmware init-ifupdown busybox-udhcpd"
 
 # we don't need the full tools-testapps
 IMAGE_INSTALL += " evtest tslib tslib-conf tslib-tests tslib-calibrate xev"
-IMAGE_INSTALL += " connman-client"
+IMAGE_INSTALL += " iw connman-client"
 
 EXTRA_IMAGE_FEATURES += " \
     nfs-server \
