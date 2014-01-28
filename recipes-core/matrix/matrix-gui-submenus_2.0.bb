@@ -9,7 +9,7 @@ require matrix-gui-paths.inc
 # reset the LIC_FILES_CHKSUM setting from the matrix-gui-apps-git.inc file
 LIC_FILES_CHKSUM = "file://LICENSE;md5=6e0ae7214f6c74c149cb25f373057fa9"
 
-PR = "${INC_PR}.9"
+PR = "${INC_PR}.10"
 
 # These packages make submenus in matrix and are not architecture specific
 inherit allarch
