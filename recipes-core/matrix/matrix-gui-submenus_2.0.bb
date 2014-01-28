@@ -39,6 +39,7 @@ FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/*/*/*"
 FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/displaycontrol_apps/dvi2lcd/*"
 FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/displaycontrol_apps/lcd2dvi/*"
 FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/usb_apps/usbbonnie/*/*"
+FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/games_apps/*/*"
 
 
 
@@ -59,3 +60,4 @@ FILES_${PN}-settings = "${MATRIX_APP_DIR}/settings_submenu/*"
 FILES_${PN}-usb = "${MATRIX_APP_DIR}/usb_submenu/*"
 FILES_${PN}-wifi = "${MATRIX_APP_DIR}/wifi_submenu/*"
 FILES_${PN}-oprofile = "${MATRIX_APP_DIR}/oprofile_submenu/*"
+FILES_${PN}-games = "${MATRIX_APP_DIR}/games_submenu/*"
