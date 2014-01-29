@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=a886c9ef769b2d8271115d2502512e5d"
 
 SECTION = "multimedia"
 
-PR = "r2"
+PR = "r3"
 
 INITSCRIPT_NAME = "matrix-gui-2.0"
 INITSCRIPT_PARAMS = "defaults 97"
@@ -16,7 +16,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 inherit update-rc.d
 
 BRANCH ?= "master"
-SRCREV = "0801859533b4b0d5198b9b599c83c214c7b478af"
+SRCREV = "d9699f158c9cff66c14aac39ae81d8f7a4c3d0b4"
 
 SRC_URI = "git://github.com/crystalfontz/matrix-gui-v2.git;protocol=git;branch=${BRANCH} \
            file://init \
