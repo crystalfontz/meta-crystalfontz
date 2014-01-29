@@ -1,7 +1,7 @@
 DESCRIPTION = "Matrix Image for Crystalfontz boards"
 LICENSE = "MIT"
 
-PR = "r1"
+PR = "r2"
 
 IMAGE_INSTALL = "packagegroup-core-boot ${ROOTFS_PKGMANAGE_BOOTSTRAP} ${CORE_IMAGE_EXTRA_INSTALL}"
 
@@ -50,6 +50,8 @@ IMAGE_INSTALL += " \
     matrix-gui \
     matrix-gui-settings-demos \
     matrix-gui-wifi-demos \
+    wpa-gui-e \
+    matrix-gui-games-demos \
 "
 
 inherit core-image

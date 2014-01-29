@@ -4,7 +4,7 @@ LICENSE = "CC-BY-SA"
 
 require matrix-gui-apps-git.inc
 
-PR = "${INC_PR}.4"
+PR = "${INC_PR}.5"
 
 inherit allarch
 
@@ -17,4 +17,5 @@ FILES_${PN} += "${MATRIX_BASE_DIR}/*/*/*"
 FILES_${PN} += "${S}/*/*"
 
 FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/settings_apps/*"
+#FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/games_apps/*"
 

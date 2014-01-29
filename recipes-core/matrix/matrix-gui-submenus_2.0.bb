@@ -9,7 +9,7 @@ require matrix-gui-paths.inc
 # reset the LIC_FILES_CHKSUM setting from the matrix-gui-apps-git.inc file
 LIC_FILES_CHKSUM = "file://LICENSE;md5=6e0ae7214f6c74c149cb25f373057fa9"
 
-PR = "${INC_PR}.15"
+PR = "${INC_PR}.19"
 
 # These packages make submenus in matrix and are not architecture specific
 inherit allarch
@@ -17,7 +17,7 @@ inherit allarch
 S = "${WORKDIR}/git"
 
 # List of submenus to build packages for
-SUBMENUS = "games_submenu qt4_submenu settings_submenu wifi_submenu"
+SUBMENUS = "qt4_submenu settings_submenu wifi_submenu games_submenu"
 
 INSANE_SKIP_${PN} = "True"
 
@@ -30,11 +30,11 @@ do_install(){
     done
 }
 
-PACKAGES += "${PN}-qt4 ${PN}-settings ${PN}-wifi"
+PACKAGES += "${PN}-qt4 ${PN}-settings ${PN}-wifi ${PN}-games"
 
 FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/*/*/*"
 FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/games_apps/*"
-FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/games_submenu/*"
+#FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/games_submenu/*"
 FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/settings_apps/*/*"
 
 
