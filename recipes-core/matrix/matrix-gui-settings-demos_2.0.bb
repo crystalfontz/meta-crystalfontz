@@ -13,9 +13,5 @@ S = "${WORKDIR}/git/settings_apps"
 # Make sure setting submenu and app images has been installed
 RDEPENDS_${PN} += "matrix-gui-apps-images matrix-gui-submenus-settings am-sysinfo"
 
-FILES_${PN} += "${MATRIX_BASE_DIR}/*/*/*"
-FILES_${PN} += "${S}/*/*"
-
-FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/settings_apps/*"
-#FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/games_apps/*"
+FILES_${PN} += "${MATRIX_BASE_DIR}/*"
 

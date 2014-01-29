@@ -47,10 +47,11 @@ IMAGE_INSTALL += " \
     qt4-embedded-plugin-imageformat-jpeg \
     qt4-embedded-qml-plugins \
     qtdeclarative \
+    wpa-gui-e \
     matrix-gui \
+    matrix-gui-browser \
     matrix-gui-settings-demos \
     matrix-gui-wifi-demos \
-    wpa-gui-e \
     matrix-gui-games-demos \
 "
 
