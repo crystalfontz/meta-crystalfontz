@@ -5,7 +5,7 @@ PR = "r2"
 
 IMAGE_INSTALL = "packagegroup-core-boot ${ROOTFS_PKGMANAGE_BOOTSTRAP} ${CORE_IMAGE_EXTRA_INSTALL}"
 
-IMAGE_INSTALL += " linux-firmware init-ifupdown busybox-udhcpd"
+IMAGE_INSTALL += " linux-firmware init-ifupdown busybox-udhcpd iw"
 
 EXTRA_IMAGE_FEATURES += " \
     nfs-server \

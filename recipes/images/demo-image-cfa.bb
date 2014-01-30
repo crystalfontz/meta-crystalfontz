@@ -3,7 +3,7 @@ include recipes-sato/images/core-image-sato.bb
 IMAGE_FEATURES += "debug-tweaks"
 WEB = "web-webkit"
 
-IMAGE_INSTALL += " linux-firmware init-ifupdown busybox-udhcpd"
+IMAGE_INSTALL += " linux-firmware init-ifupdown busybox-udhcpd cfa-prebuilt"
 
 # we don't need the full tools-testapps
 IMAGE_INSTALL += " evtest tslib tslib-conf tslib-tests tslib-calibrate xev"

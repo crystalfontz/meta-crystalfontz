@@ -33,6 +33,7 @@ do_install(){
 PACKAGES += "${PN}-qt4 ${PN}-settings ${PN}-wifi ${PN}-games"
 
 FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/*/*/*"
+FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/games_apps/*"
 
 # Make sure app images has been installed
 RDEPENDS_${PN} += "matrix-gui-apps-images"
