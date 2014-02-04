@@ -1,7 +1,7 @@
 DESCRIPTION = "Matrix Image for Crystalfontz boards"
 LICENSE = "MIT"
 
-PR = "r4"
+PR = "pr4"
 
 IMAGE_INSTALL = "packagegroup-core-boot ${ROOTFS_PKGMANAGE_BOOTSTRAP} ${CORE_IMAGE_EXTRA_INSTALL}"
 
@@ -20,9 +20,9 @@ EXTRA_IMAGE_FEATURES += " \
 
 IMAGE_INSTALL += " evtest tslib tslib-conf tslib-tests tslib-calibrate"
 IMAGE_INSTALL += " devmem2 wireless-tools i2c-tools tzdata wpa-supplicant"
-IMAGE_INSTALL += " nano mono openjdk-7-jre lcdproc lcdd screen libsdl2-dev"
+IMAGE_INSTALL += " nano mono openjdk-7-jre lcdproc lcdd screen libsdl-dev"
 IMAGE_INSTALL += " libsdl-mixer openssh-sftp openssh-sftp-server libsdl-net"
-IMAGE_INSTALL += " libsdl-ttf"
+IMAGE_INSTALL += " libsdl-ttf libsdl"
 
 
 IMAGE_LINGUAS = " "
