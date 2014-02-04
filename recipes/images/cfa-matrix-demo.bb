@@ -22,6 +22,7 @@ IMAGE_INSTALL += " evtest tslib tslib-conf tslib-tests tslib-calibrate"
 IMAGE_INSTALL += " devmem2 wireless-tools i2c-tools tzdata wpa-supplicant"
 IMAGE_INSTALL += " nano mono openjdk-7-jre lcdproc lcdd screen libsdl2-dev"
 IMAGE_INSTALL += " libsdl-mixer openssh-sftp openssh-sftp-server libsdl-net"
+IMAGE_INSTALL += " libsdl-ttf"
 
 
 IMAGE_LINGUAS = " "
