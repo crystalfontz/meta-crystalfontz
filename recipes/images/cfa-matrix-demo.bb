@@ -1,11 +1,11 @@
 DESCRIPTION = "Matrix Image for Crystalfontz boards"
 LICENSE = "MIT"
 
-PR = "r2"
+PR = "r4"
 
 IMAGE_INSTALL = "packagegroup-core-boot ${ROOTFS_PKGMANAGE_BOOTSTRAP} ${CORE_IMAGE_EXTRA_INSTALL}"
 
-IMAGE_INSTALL += " linux-firmware init-ifupdown busybox-udhcpd iw"
+IMAGE_INSTALL += " linux-firmware init-ifupdown busybox-udhcpd iw libpng"
 
 EXTRA_IMAGE_FEATURES += " \
     nfs-server \
@@ -20,8 +20,8 @@ EXTRA_IMAGE_FEATURES += " \
 
 IMAGE_INSTALL += " evtest tslib tslib-conf tslib-tests tslib-calibrate"
 IMAGE_INSTALL += " devmem2 wireless-tools i2c-tools tzdata wpa-supplicant"
-IMAGE_INSTALL += " nano mono openjdk-7-jre lcdproc lcdd screen libsdl-dev"
-IMAGE_INSTALL += " libsdl-mixer openssh-sftp openssh-sftp-server"
+IMAGE_INSTALL += " nano mono openjdk-7-jre lcdproc lcdd screen libsdl2-dev"
+IMAGE_INSTALL += " libsdl-mixer openssh-sftp openssh-sftp-server libsdl-net"
 
 
 IMAGE_LINGUAS = " "
@@ -53,6 +53,7 @@ IMAGE_INSTALL += " \
     matrix-gui-settings-demos \
     matrix-gui-wifi-demos \
     matrix-gui-games-demos \
+	cfa-prebuilt \
 "
 
 inherit core-image
