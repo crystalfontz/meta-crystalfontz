@@ -1,11 +1,11 @@
 DESCRIPTION = "Matrix Image for Crystalfontz boards"
 LICENSE = "MIT"
 
-PR = "pr5"
+PR = "pr6"
 
 IMAGE_INSTALL = "packagegroup-core-boot ${ROOTFS_PKGMANAGE_BOOTSTRAP} ${CORE_IMAGE_EXTRA_INSTALL}"
 
-IMAGE_INSTALL += " linux-firmware init-ifupdown busybox-udhcpd iw libpng"
+IMAGE_INSTALL += " linux-firmware init-ifupdown busybox-udhcpd iw libpng psplash"
 
 EXTRA_IMAGE_FEATURES += " \
     nfs-server \
