@@ -1,7 +1,7 @@
 DESCRIPTION = "Matrix Image for Crystalfontz boards"
 LICENSE = "MIT"
 
-PR = "pr6"
+PR = "pr8"
 
 IMAGE_INSTALL = "packagegroup-core-boot ${ROOTFS_PKGMANAGE_BOOTSTRAP} ${CORE_IMAGE_EXTRA_INSTALL}"
 
@@ -24,10 +24,12 @@ IMAGE_INSTALL += " nano mono openjdk-7-jre lcdproc lcdd screen libsdl-dev"
 IMAGE_INSTALL += " libsdl-mixer openssh-sftp openssh-sftp-server libsdl-net"
 IMAGE_INSTALL += " libsdl-ttf libsdl"
 
-
 IMAGE_LINGUAS = " "
 
 IMAGE_INSTALL += " \
+	clutter-1.0 \
+	glew \
+	qtwayland \
     cpufrequtils \
     nano \
     packagegroup-qt-in-use-demos \
@@ -41,6 +43,7 @@ IMAGE_INSTALL += " \
     tcpdump \
     curl \
     ethtool \
+    libqtopengl4-dev \
     qt4-embedded-plugin-mousedriver-tslib \
     qt4-embedded-plugin-gfxdriver-gfxtransformed \
     qt4-embedded-plugin-phonon-backend-gstreamer \
@@ -56,6 +59,7 @@ IMAGE_INSTALL += " \
     matrix-gui-games-demos \
     matrix-gui-qt4-demos \
 	cfa-prebuilt \
+	mesa-dev \
 "
 
 inherit core-image

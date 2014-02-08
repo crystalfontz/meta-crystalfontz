@@ -1,0 +1,39 @@
+From a5954ca635924a28611436098b7aa0b873ae1f1e Mon Sep 17 00:00:00 2001
+From: Ian Wisbon <ian.wisbon@timesys.com>
+Date: Thu, 23 May 2013 11:42:30 -0400
+Subject: [PATCH] uvccapture: Patch to use videodev2.h instead of videodev.h
+
+---
+ uvccapture.c |    2 +-
+ v4l2uvc.c    |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/uvccapture.c b/uvccapture.c
+index 9ee0d23..9174c9c 100644
+--- a/uvccapture.c
++++ b/uvccapture.c
+@@ -32,7 +32,7 @@
+ #include <unistd.h>
+ #include <jpeglib.h>
+ #include <time.h>
+-#include <linux/videodev.h>
++#include <linux/videodev2.h>
+ 
+ #include "v4l2uvc.h"
+ 
+diff --git a/v4l2uvc.c b/v4l2uvc.c
+index afbb843..13de180 100644
+--- a/v4l2uvc.c
++++ b/v4l2uvc.c
+@@ -28,7 +28,7 @@
+ #include <errno.h>
+ #include <unistd.h>
+ #include <fcntl.h>
+-#include <linux/videodev.h>
++#include <linux/videodev2.h>
+ #include <sys/mman.h>
+ #include <sys/ioctl.h>
+ #include "v4l2uvc.h"
+-- 
+1.7.9.5
+
