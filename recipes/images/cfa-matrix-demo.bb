@@ -58,8 +58,9 @@ IMAGE_INSTALL += " \
     matrix-gui-wifi-demos \
     matrix-gui-games-demos \
     matrix-gui-qt4-demos \
-	cfa-prebuilt \
 	mesa-dev \
+	libsdl-dev \
+	cfa-prebuilt \
 "
 
 inherit core-image
