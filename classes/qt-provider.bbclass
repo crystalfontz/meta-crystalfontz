@@ -8,6 +8,7 @@
 #    instead of the actual Qt-version specific values
 
 QT_PROVIDER ?= "qt4e"
+#QT_PROVIDER ?= "qt5"
 
 inherit ${QT_PROVIDER}
 inherit qt-vars

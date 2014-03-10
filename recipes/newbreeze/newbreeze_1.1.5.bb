@@ -4,8 +4,8 @@ DESCRIPTION = "Fast and light-weight File Manager."
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file:///${WORKDIR}/NewBreeze/debian/copyright;md5=edbe551f06368ca911b2b5e0797fb31e"
 
-DEPENDS = "libtar libzip zlib bzip2 lzma"
-RDEPENDS_${PN} = "zlib"
+RDEPENDS_${PN} = "libtar libzip zlib bzip2 file xdg-utils"
+#lzma
 
 SRC_URI = "http://downloads.sourceforge.net/project/newbreeze/1.1.5/NewBreeze.tar.xz"
 
@@ -17,9 +17,14 @@ S = "${WORKDIR}/NewBreeze"
 LDFLAGS = " -lz -L${STAGING_LIBDIR}"
 CFLAGS += "-lz -L${STAGING_LIBDIR}"
 
-inherit qt4e autotools pkgconfig
+inherit qt4e autotools pkgconfig 
 
 ARM_INSTRUCTION_SET = "arm"
+
+do_compile () {
+       cd ${S}
+       qmake && make
+}
 
 do_install () {
        install -d ${D}${bindir}

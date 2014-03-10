@@ -9,7 +9,7 @@ require matrix-gui-paths.inc
 # reset the LIC_FILES_CHKSUM setting from the matrix-gui-apps-git.inc file
 LIC_FILES_CHKSUM = "file://LICENSE;md5=6e0ae7214f6c74c149cb25f373057fa9"
 
-PR = "${INC_PR}.1"
+PR = "${INC_PR}.3"
 
 # These packages make submenus in matrix and are not architecture specific
 inherit allarch
@@ -17,7 +17,7 @@ inherit allarch
 S = "${WORKDIR}/git"
 
 # List of submenus to build packages for
-SUBMENUS = "qt4_submenu settings_submenu wifi_submenu games_submenu"
+SUBMENUS = "qt4_submenu settings_submenu wifi_submenu games_submenu filemanager_submenu"
 
 INSANE_SKIP_${PN} = "True"
 
@@ -30,10 +30,11 @@ do_install(){
     done
 }
 
-PACKAGES += "${PN}-qt4 ${PN}-settings ${PN}-wifi ${PN}-games"
+PACKAGES += "${PN}-qt4 ${PN}-settings ${PN}-wifi ${PN}-games ${PN}-filemanager"
 
 FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/*/*/*"
 FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/games_apps/*"
+FILES_${PN} += "/usr/share/matrix-gui-2.0/apps/filemanager_apps/*"
 
 # Make sure app images has been installed
 RDEPENDS_${PN} += "matrix-gui-apps-images"
@@ -43,3 +44,5 @@ FILES_${PN}-qt4 = "${MATRIX_APP_DIR}/qt4_submenu/*"
 FILES_${PN}-settings = "${MATRIX_APP_DIR}/settings_submenu/*"
 FILES_${PN}-wifi = "${MATRIX_APP_DIR}/wifi_submenu/*"
 FILES_${PN}-games = "${MATRIX_APP_DIR}/games_submenu/*"
+FILES_${PN}-filemanager = "${MATRIX_APP_DIR}/filemanager_submenu/*"
+FILES_${PN}-filemanager += "${MATRIX_APP_DIR}/filemanager_apps/*"
