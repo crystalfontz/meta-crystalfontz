@@ -9,8 +9,6 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit pkgconfig
 
-#RDEPENDS_${PN} = "libpng libungif libjpeg"
-
 INSANE_SKIP_${PN} = "True"
 INSANE_SKIP_${PN} += "already-stripped"
 INSANE_SKIP_${PN} += "ldflags"
@@ -47,11 +45,3 @@ do_install () {
 FILES_${PN} += "/usr/share/*"
 FILES_${PN} += "/usr/games/*/*"
 FILES_${PN} += "/usr/games"
-#FILES_${PN} += "/usr/lib"
-#			file://fbv 
-#			file://lib/libpng14.so.14
-#			file://lib/libungif.so.4 
-#    cp ${WORKDIR}/lib/libpng14.so.14 ${D}/${libdir}
-#    cp ${WORKDIR}/lib/libungif.so.4 ${D}/${libdir}
-#    install -m 0755 ${WORKDIR}/fbv ${D}${bindir}
-#    install -m 0644 ${WORKDIR}/prboom ${D}/usr/games

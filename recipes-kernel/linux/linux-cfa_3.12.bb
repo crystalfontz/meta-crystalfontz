@@ -2,15 +2,16 @@ include linux-cfa.inc
 
 PR = "r3"
 
+SRC_BRANCH = "cfa-3.12.14"
+SRCREV = "6e2d67727fc07d822e70840e69f4bd3a02842aa2"
 
 #SRC_BRANCH = "cfa-3.12.6"
 #SRCREV = "39ceaa0f7d0c19032790699a9dc29ceff7ce48a5"
 
-SRC_BRANCH = "cfa-3.12.13"
-SRCREV = "85b2779d5dedf340ac38d1e22b664ec452fe9e77"
-
 #SRC_BRANCH = "cfa-3.12.8"
 #SRCREV = "4ec144fcda849c355747e0d0f28cbc50752b5274"
 
+#SRC_BRANCH = "cfa-3.12.13"
+#SRCREV = "85b2779d5dedf340ac38d1e22b664ec452fe9e77"
 
 COMPATIBLE_MACHINE = "cfa10036"

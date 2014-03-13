@@ -6,6 +6,8 @@ IMAGE_PREPROCESS_COMMAND = "rootfs_update_timestamp"
 
 IMAGE_ROOTFS_EXTRA_SPACE="1000000"
 
+DISTRO_FEATURES = "pam"
+
 IMAGE_FEATURES += "debug-tweaks package-management splash"
 WEB = "web-webkit"
 
@@ -32,7 +34,7 @@ IMAGE_INSTALL += " \
 # Kernel related
 IMAGE_INSTALL += " \
 	linux-firmware \
-	kernel-modules
+	kernel-modules \
 "
 
 # Networking related
@@ -45,6 +47,7 @@ IMAGE_INSTALL += " \
 	wpa-supplicant \
 	openssh-sftp-server \
 	openssh-sftp \
+	wpa-gui-e \
 "
 
 # Hardware related
@@ -60,11 +63,12 @@ IMAGE_INSTALL += " \
 	i2c-tools \
 	traceroute \
 	uvccapture \
-	wpa-gui-e \
 "
 
 IMAGE_INSTALL += " \
     nano \
+	emacs \
+	vim \
     fbv \
     minicom \
     packagegroup-qt-in-use-demos \
@@ -72,9 +76,15 @@ IMAGE_INSTALL += " \
     qt4-examples \
     cfa-config-extra \
 	tzdata \
+	gimp \
 "
 
+# development / etc.
 IMAGE_INSTALL += " \
+	python-pyserial \
+	python-pyusb \
+	python-simplejson \
+	python-pyudev \
 	nano \
 	mono \
 	openjdk-7-jre \
