@@ -1,0 +1,1 @@
+EXTRA_QMAKEVARS_PRE = "CONFIG+=webcam"

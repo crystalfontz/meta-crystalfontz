@@ -5,7 +5,6 @@ LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file:///${WORKDIR}/NewBreeze/debian/copyright;md5=edbe551f06368ca911b2b5e0797fb31e"
 
 RDEPENDS_${PN} = "libtar libzip zlib bzip2 file xdg-utils"
-#lzma
 
 SRC_URI = "http://downloads.sourceforge.net/project/newbreeze/1.1.5/NewBreeze.tar.xz"
 
