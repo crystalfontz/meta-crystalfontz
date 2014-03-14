@@ -1,11 +1,12 @@
 # Disable services that are enabled by default, but not necessary for an 
 # image to be useful (want in the image, but not running by default)
 
-move_demo_images () {
-	cd ${FILE_DIRNAME}
-	cd ..
-	cp -r cfa-prebuilt/cfa-prebuilt/images ${IMAGE_ROOTFS}/home/root/
-}
+#move_demo_images () {
+#	cd ${OEBASE}
+#	pwd
+#	cd sources/meta-crystalfontz/
+#	cp -r cfa-prebuilt/cfa-prebuilt/images ${IMAGE_ROOTFS}/home/root/
+#}
 
 deploy_manifests () {
 	cd ${DEPLOY_DIR}/licenses
@@ -43,7 +44,7 @@ ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/init.d/lighttpd ${IMAGE_RO
 ROOTFS_POSTPROCESS_COMMAND += "deploy_manifests"
 
 # deploy all the images to cover all builds to the target for the slideshow, et cetera.
-ROOTFS_POSTPROCESS_COMMAND += "move_demo_images"
+#ROOTFS_POSTPROCESS_COMMAND += "move_demo_images"
 
 
 
