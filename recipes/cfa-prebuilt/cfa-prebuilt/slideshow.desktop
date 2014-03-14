@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Slideshow
+Exec=/home/root/images/slideshow.sh
+Icon=slideshow
+Terminal=true
+Type=Application
+X-MB-SingleInstance=true
+Comment=Slideshow, touch screen to stop
+StartupNotify=false

@@ -38,6 +38,11 @@ ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/init.d/ofono ${IMAGE_ROOTF
 ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/init.d/matrix-gui-2.0 ${IMAGE_ROOTFS}/etc/init.d_disabled/;"
 ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/init.d/lighttpd ${IMAGE_ROOTFS}/etc/init.d_disabled/;"
 
+# fix psplash.sh in /etc/rcS.d to be S01psplash.sh so that we can run our 
+# configuration script just prior to set things like the touchscreen, rotation
+# of the screen and the splash screen
+ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/rcS.d/S00psplash.sh ${IMAGE_ROOTFS}/etc/rcS.d/S01psplash.sh;"
+ROOTFS_POSTPROCESS_COMMAND += "cp ${IMAGE_ROOTFS}/etc/rcS.d/S00cfa-preconfig.sh ${IMAGE_ROOTFS}/etc/init.d/cfa-preconfig.sh;"
 
 
 # deploy manifest files to the target

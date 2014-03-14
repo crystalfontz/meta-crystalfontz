@@ -66,6 +66,7 @@ IMAGE_INSTALL += " \
 "
 
 IMAGE_INSTALL += " \
+	evince \
     nano \
 	emacs \
 	vim \

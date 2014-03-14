@@ -1,0 +1,32 @@
+#! /bin/sh
+#
+# startup_screens   This script sends the boot image to the respective screen
+#
+# Version:      @(#)startup_screens  1.0  09-Jan-2013  brian@crystalfontz.com
+#
+
+
+#. /etc/default/rcS
+
+# Uncomment if the device has both an OLED and a TFT
+#cat /root/CFA10036_splash.bin > /dev/fb1
+
+# Uncomment if the device has only an OLED (CFA-10036 
+#cat /root/CFA10036_splash.bin > /dev/fb0
+ 
+# Uncomment for the CFA10036+CFA10037+CFA10055
+#fbv --delay 10 /root/images/CFAF320480C4-035T-TS.jpg > /dev/null &
+#/root/images/CFA10055_slideshow > /dev/null &
+ 
+# Uncomment for the CFA10036+CFA10037+CFA10056
+#fbv --delay 10 /root/images/CFAF800480FT2-040T_90CW.jpg > /dev/null &
+#/root/images/CFA10056_slideshow > /dev/null &
+ 
+# Uncomment for the CFA10036+CFA10057
+#fbv --delay 10 /root/images/CFAF480800T07-043T-TS_Portrait.jpg > /dev/null &
+#/root/images/CFA10057_slideshow > /dev/null &
+ 
+# Uncomment for the CFA10036+CFA10058
+fbv --delay 10 /root/images/CFAF800480A-050T-TS.jpg > /dev/null &
+/root/images/CFA10058_slideshow > /dev/null &
+ 

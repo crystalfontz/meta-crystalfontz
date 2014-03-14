@@ -1,0 +1,45 @@
+#!/bin/sh
+SECONDS=2
+FOREVER=0
+
+sleep 60
+
+while [ $FOREVER -lt 1 ]; do
+
+fbv -d 30 /root/images/320x480/vertical/1280px-Flower_jtca001.jpg > /dev/null
+sleep $SECONDS
+fbv -d 30 /root/images/320x480/vertical/339146368_5e2ec1b1f5_o.jpg > /dev/null
+sleep $SECONDS
+fbv -d 30 /root/images/320x480/vertical/3946279121_e3de277f3d_o.jpg > /dev/null 
+sleep $SECONDS
+fbv -d 30 /root/images/320x480/vertical/416016_priroda_kanon_1680x1050_\(www.GdeFon.ru\).jpg > /dev/null
+sleep $SECONDS
+fbv -d 30 /root/images/320x480/vertical/4547494619_7dc2628d09_o.jpg > /dev/null
+sleep $SECONDS
+fbv -d 30 /root/images/320x480/vertical/5040077450_d4abe28445_o.jpg > /dev/null
+sleep $SECONDS
+fbv -d 30 /root/images/320x480/vertical/5187385512_f0d42cff3e_o.jpg > /dev/null
+sleep $SECONDS
+fbv -d 30 /root/images/320x480/vertical/6963572323_f93c4f68e8_o.jpg > /dev/null
+sleep $SECONDS
+fbv -d 30 /root/images/320x480/vertical/7866099788_d57a0ecd6c_o.jpg > /dev/null
+sleep $SECONDS
+fbv -d 30 /root/images/320x480/vertical/8544727431_dc23298173_o.jpg > /dev/null
+sleep $SECONDS
+fbv -d 30 /root/images/320x480/vertical/A_white_water_lily_in_a_pond_-_03.jpg > /dev/null
+sleep $SECONDS
+fbv -d 30 /root/images/320x480/vertical/Dendrobates_azureus_\(Dendrobates_tinctorius\)_Edit.jpg > /dev/null
+sleep $SECONDS
+fbv -d 30 /root/images/320x480/vertical/The-best-top-desktop-space-wallpapers-0p-hd-space-wallpaper-planets.jpg > /dev/null
+sleep $SECONDS
+fbv -d 30 /root/images/320x480/vertical/Xeroxidated_by_starfantazy.jpg > /dev/null
+sleep $SECONDS
+fbv -d 30 /root/images/320x480/vertical/colibri.71212.jpg > /dev/null
+sleep $SECONDS
+fbv -d 30 /root/images/320x480/vertical/cool_flower-wide.jpg > /dev/null
+sleep $SECONDS
+fbv -d 30 /root/images/320x480/vertical/yellow-and-silver-fish.jpg > /dev/null
+sleep $SECONDS
+
+done
+
