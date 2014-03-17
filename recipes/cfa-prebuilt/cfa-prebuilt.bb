@@ -34,6 +34,7 @@ do_install () {
     install -d ${D}/${datadir}/games/doom
     install -d ${D}/${datadir}/pixmaps
     install -d ${D}/${datadir}/applications
+    install -d ${D}/etc/rcS.d
     install -d ${D}/${prefix}/games
     install -d ${D}/home/root/images
     install -m 0755 ${WORKDIR}/doom.sh ${D}${bindir}
@@ -54,3 +55,4 @@ FILES_${PN} += "/usr/games/*/*"
 FILES_${PN} += "/usr/games"
 FILES_${PN} += "/home/root/images/*"
 FILES_${PN} += "/home/root/*"
+FILES_${PN} += "/etc/rcS.d/*"
