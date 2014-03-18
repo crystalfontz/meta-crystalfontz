@@ -22,8 +22,11 @@ EXTRA_IMAGE_FEATURES += " \
 	tools-sdk \
 "
 
+# splash screen, process management 
 IMAGE_INSTALL += " \
 	psplash \
+	psmisc \
+	procps \
 "
 
 # laziness / other
@@ -69,7 +72,6 @@ IMAGE_INSTALL += " \
 	evince \
     nano \
 	emacs \
-	vim \
     fbv \
     minicom \
     packagegroup-qt-in-use-demos \

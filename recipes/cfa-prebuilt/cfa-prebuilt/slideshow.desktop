@@ -5,5 +5,5 @@ Icon=slideshow
 Terminal=true
 Type=Application
 X-MB-SingleInstance=true
-Comment=Slideshow, touch screen to stop
+Comment=touch screen to stop
 StartupNotify=false

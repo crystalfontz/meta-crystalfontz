@@ -2,45 +2,45 @@
 FOREVER=0
 SECONDS=2
 
-sleep 60
+python touchtokillslideshow.py &
 
 while [ $FOREVER -lt 1 ]; do
 
-fbv -d 30 /root/images/800x480/vertical_rotated/1280px-Flower_jtca001.jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/1280px-Flower_jtca001.jpg
 sleep $SECONDS
-fbv -d 30 /root/images/800x480/vertical_rotated/339146368_5e2ec1b1f5_o.jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/339146368_5e2ec1b1f5_o.jpg
 sleep $SECONDS
-fbv -d 30 /root/images/800x480/vertical_rotated/3946279121_e3de277f3d_o.jpg > /dev/null 
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/3946279121_e3de277f3d_o.jpg 
 sleep $SECONDS
-fbv -d 30 /root/images/800x480/vertical_rotated/416016_priroda_kanon_1680x1050_\(www.GdeFon.ru\).jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/416016_priroda_kanon_1680x1050_\(www.GdeFon.ru\).jpg
 sleep $SECONDS
-fbv -d 30 /root/images/800x480/vertical_rotated/4547494619_7dc2628d09_o.jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/4547494619_7dc2628d09_o.jpg
 sleep $SECONDS
-fbv -d 30 /root/images/800x480/vertical_rotated/5040077450_d4abe28445_o.jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/5040077450_d4abe28445_o.jpg
 sleep $SECONDS 
-fbv -d 30 /root/images/800x480/vertical_rotated/5187385512_f0d42cff3e_o.jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/5187385512_f0d42cff3e_o.jpg
 sleep $SECONDS
-fbv -d 30 /root/images/800x480/vertical_rotated/6963572323_f93c4f68e8_o.jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/6963572323_f93c4f68e8_o.jpg
 sleep $SECONDS
-fbv -d 30 /root/images/800x480/vertical_rotated/7866099788_d57a0ecd6c_o.jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/7866099788_d57a0ecd6c_o.jpg
 sleep $SECONDS
-fbv -d 30 /root/images/800x480/vertical_rotated/8544727431_dc23298173_o.jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/8544727431_dc23298173_o.jpg
 sleep $SECONDS
-fbv -d 30 /root/images/800x480/vertical_rotated/A_white_water_lily_in_a_pond_-_03.jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/A_white_water_lily_in_a_pond_-_03.jpg
 sleep $SECONDS
-fbv -d 30 /root/images/800x480/vertical_rotated/Dendrobates_azureus_\(Dendrobates_tinctorius\)_Edit.jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/Dendrobates_azureus_\(Dendrobates_tinctorius\)_Edit.jpg
 sleep $SECONDS
-fbv -d 30 /root/images/800x480/vertical_rotated/The-best-top-desktop-space-wallpapers-0p-hd-space-wallpaper-planets.jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/The-best-top-desktop-space-wallpapers-0p-hd-space-wallpaper-planets.jpg
 sleep $SECONDS
-fbv -d 30 /root/images/800x480/vertical_rotated/Xeroxidated_by_starfantazy.jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/Xeroxidated_by_starfantazy.jpg
 sleep $SECONDS
-fbv -d 30 /root/images/800x480/vertical_rotated/colibri.71212.jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/colibri.71212.jpg
 sleep $SECONDS
-fbv -d 30 /root/images/800x480/vertical_rotated/cool_flower-wide.jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/cool_flower-wide.jpg
 sleep $SECONDS
-fbv -d 30 /root/images/800x480/vertical_rotated/sunrise_at_brigde_by_panjirelawan-d5cttd6.jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/sunrise_at_brigde_by_panjirelawan-d5cttd6.jpg
 sleep $SECONDS
-fbv -d 30 /root/images/800x480/vertical_rotated/yellow-and-silver-fish.jpg > /dev/null
+fbv -d -i 30 /home/root/images/800x480/vertical_rotated/yellow-and-silver-fish.jpg
 sleep $SECONDS
 
 done

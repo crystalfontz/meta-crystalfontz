@@ -44,7 +44,6 @@ ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/init.d/lighttpd ${IMAGE_RO
 ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/rcS.d/S00psplash.sh ${IMAGE_ROOTFS}/etc/rcS.d/S01psplash.sh;"
 ROOTFS_POSTPROCESS_COMMAND += "cp ${IMAGE_ROOTFS}/etc/rcS.d/S00cfa-preconfig.sh ${IMAGE_ROOTFS}/etc/init.d/cfa-preconfig.sh;"
 
-
 # deploy manifest files to the target
 ROOTFS_POSTPROCESS_COMMAND += "deploy_manifests"
 
