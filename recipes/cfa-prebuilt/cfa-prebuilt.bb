@@ -24,9 +24,10 @@ SRC_URI += "file://doom.sh \
 			file://doom.desktop \
 			file://doom.png \
 			file://images/* \
+			file://configuration/* \
 			file://slideshow.desktop \
 			file://S00cfa-preconfig.sh \
-			file://S70slideshow-link.sh \
+			file://S30slideshow-link.sh \
 			file://touchtokillslideshow.py \
 			"
 
@@ -39,10 +40,11 @@ do_install () {
     install -d ${D}/etc/rcS.d
     install -d ${D}/${prefix}/games
     install -d ${D}/home/root/images
+    install -d ${D}/home/root/.configuration
     install -m 0755 ${WORKDIR}/doom.sh ${D}${bindir}
     install -m 0755 ${WORKDIR}/touchtokillslideshow.py ${D}${bindir}
     install -m 0755 ${WORKDIR}/S00cfa-preconfig.sh ${D}/etc/rcS.d/S00cfa-preconfig.sh
-    install -m 0755 ${WORKDIR}/S70slideshow-link.sh ${D}/etc/rcS.d/S70slideshow-link.sh
+    install -m 0755 ${WORKDIR}/S30slideshow-link.sh ${D}/etc/rcS.d/S30slideshow-link.sh
     install -m 0644 ${WORKDIR}/prboom-game-server ${D}/usr/games
     install -m 0644 ${WORKDIR}/doom1.wad ${D}/${datadir}/games/doom
     install -m 0644 ${WORKDIR}/prboom.wad ${D}/${datadir}/games/doom
@@ -52,12 +54,14 @@ do_install () {
     install -m 0644 ${WORKDIR}/doom.png ${D}/${datadir}/pixmaps/
     install -m 0644 ${WORKDIR}/slideshow.png ${D}/${datadir}/pixmaps/
     install -m 0644 ${WORKDIR}/reboot_icon.png ${D}/${datadir}/pixmaps/
+    cp -r ${FILE_DIRNAME}/${BPN}/configuration/* ${D}/home/root/.configuration/
     cp -r ${FILE_DIRNAME}/${BPN}/images/* ${D}/home/root
 }
 
 FILES_${PN} += "/usr/share/*"
 FILES_${PN} += "/usr/games/*/*"
 FILES_${PN} += "/usr/games"
+FILES_${PN} += "/home/root/.configuration/*"
 FILES_${PN} += "/home/root/images/*"
 FILES_${PN} += "/home/root/*"
 FILES_${PN} += "/etc/rcS.d/*"

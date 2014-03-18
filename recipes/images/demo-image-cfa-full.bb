@@ -51,6 +51,7 @@ IMAGE_INSTALL += " \
 	openssh-sftp-server \
 	openssh-sftp \
 	wpa-gui-e \
+	mosh \
 "
 
 # Hardware related
@@ -80,6 +81,7 @@ IMAGE_INSTALL += " \
     cfa-config-extra \
 	tzdata \
 	gimp \
+	feh \
 "
 
 # development / etc.

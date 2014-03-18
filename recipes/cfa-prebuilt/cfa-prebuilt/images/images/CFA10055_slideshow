@@ -2,7 +2,7 @@
 SECONDS=2
 FOREVER=0
 
-python touchtokillslideshow.py &
+python /usr/bin/touchtokillslideshow.py &
 
 while [ $FOREVER -lt 1 ]; do
 
