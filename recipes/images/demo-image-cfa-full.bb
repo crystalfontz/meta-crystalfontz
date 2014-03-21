@@ -80,8 +80,7 @@ IMAGE_INSTALL += " \
     qt4-examples \
     cfa-config-extra \
 	tzdata \
-	gimp \
-	feh \
+	xiv \
 "
 
 # development / etc.
@@ -95,6 +94,7 @@ IMAGE_INSTALL += " \
 	openjdk-7-jre \
 	screen \
 	libpng \
+	qt-creator \
 "
 
 # low-level games support / games

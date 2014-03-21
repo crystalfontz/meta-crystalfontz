@@ -13,8 +13,7 @@ S = "${WORKDIR}/giblib-${PV}"
 inherit autotools pkgconfig binconfig
 
 #do_install () {
-#	autotools_stage_includes
-#	oe_libinstall -a -so -C giblib libgiblib ${STAGING_LIBDIR}
+#	oe_libinstall -a -so libgiblib ${STAGING_LIBDIR}
 #}
 
 FILES_${PN} = "${libdir}/lib*.so.*"

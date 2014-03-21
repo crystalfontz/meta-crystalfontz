@@ -14,7 +14,7 @@ SRC_URI[sha256sum] = "c964c50650ff3ec5d0e6194f020639e650ce0412dc66cf65fbacd779ce
 S = "${WORKDIR}/NewBreeze"
 
 LDFLAGS = " -lz -L${STAGING_LIBDIR}"
-CFLAGS += "-lz -L${STAGING_LIBDIR}"
+CFLAGS += "-lz -I${STAGING_INCDIR}"
 
 inherit qt4e autotools pkgconfig 
 

@@ -32,11 +32,18 @@ ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/rc3.d/S97matrix-gui-2.0 ${
 ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/rc4.d/S97matrix-gui-2.0 ${IMAGE_ROOTFS}/etc/rc4.d/K97matrix-gui-2.0;"
 ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/rc5.d/S97matrix-gui-2.0 ${IMAGE_ROOTFS}/etc/rc5.d/K97matrix-gui-2.0;"
 
+# disable smarthome demo from startup
+ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/rc2.d/S20smarthome ${IMAGE_ROOTFS}/etc/rc2.d/K20smarthome;"
+ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/rc3.d/S20smarthome ${IMAGE_ROOTFS}/etc/rc3.d/K20smarthome;"
+ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/rc4.d/S20smarthome ${IMAGE_ROOTFS}/etc/rc4.d/K20smarthome;"
+ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/rc5.d/S20smarthome ${IMAGE_ROOTFS}/etc/rc5.d/K20smarthome;"
+
 # move some stuff around init.d
 ROOTFS_POSTPROCESS_COMMAND += "mkdir ${IMAGE_ROOTFS}/etc/init.d_disabled;"
 ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/init.d/ofono ${IMAGE_ROOTFS}/etc/init.d_disabled/;"
 ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/init.d/matrix-gui-2.0 ${IMAGE_ROOTFS}/etc/init.d_disabled/;"
 ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/init.d/lighttpd ${IMAGE_ROOTFS}/etc/init.d_disabled/;"
+ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/init.d/smarthome ${IMAGE_ROOTFS}/etc/init.d_disabled/;"
 
 # fix psplash.sh in /etc/rcS.d to be S01psplash.sh so that we can run our 
 # configuration script just prior to set things like the touchscreen, rotation
