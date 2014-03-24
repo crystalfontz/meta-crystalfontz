@@ -19,5 +19,7 @@ git checkout 5b5616b63bdf163ea3eb2ca8857c56a393435fe3
 cd ../meta-crystalfontz/patches
 cp 80matchboxkeyboard.sh ../../poky/meta/recipes-sato/matchbox-keyboard/files/
 cp matchbox-keyboard-daemon.sh ../../poky/meta/recipes-sato/matchbox-keyboard/files/
+mkdir ../../build
+mkdir ../../build/conf
 cp bblayers.conf ../../../build/conf/
 cp local.conf ../../../build/conf/
