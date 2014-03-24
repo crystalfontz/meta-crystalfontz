@@ -18,6 +18,7 @@ git checkout 14d6ad1608c66b8970d4052dce4cd1fc64fb6ea2
 cd ../meta-qt5
 git checkout 5b5616b63bdf163ea3eb2ca8857c56a393435fe3
 cd ../meta-crystalfontz/patches
+pwd
 cp 80matchboxkeyboard.sh ../../poky/meta/recipes-sato/matchbox-keyboard/files/
 cp matchbox-keyboard-daemon.sh ../../poky/meta/recipes-sato/matchbox-keyboard/files/
 if [ ! -d ../../../build ]; then
