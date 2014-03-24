@@ -1,0 +1,131 @@
+diff --git a/meta/classes/kernel.bbclass b/meta/classes/kernel.bbclass
+index 61a6d10..644d793 100644
+--- a/meta/classes/kernel.bbclass
++++ b/meta/classes/kernel.bbclass
+@@ -313,7 +313,7 @@ kernel_do_configure() {
+ 	if [ -f "${WORKDIR}/defconfig" ] && [ ! -f "${B}/.config" ]; then
+ 		cp "${WORKDIR}/defconfig" "${B}/.config"
+ 	fi
+-	yes '' | oe_runmake oldconfig
++	oe_runmake oldnoconfig
+ }
+ 
+ do_savedefconfig() {
+diff --git a/meta/recipes-connectivity/wpa-supplicant/wpa-supplicant-2.0.inc b/meta/recipes-connectivity/wpa-supplicant/wpa-supplicant-2.0.inc
+index ce669a1..94ca769 100644
+--- a/meta/recipes-connectivity/wpa-supplicant/wpa-supplicant-2.0.inc
++++ b/meta/recipes-connectivity/wpa-supplicant/wpa-supplicant-2.0.inc
+@@ -82,9 +82,7 @@ do_install () {
+ 
+ pkg_postinst_wpa-supplicant () {
+ 	# If we're offline, we don't need to do this.
+-	if [ "x$D" != "x" ]; then
+-		exit 0
++	if [ "x$D" = "x" ]; then
++		killall -q -HUP dbus-daemon || true
+ 	fi
+-
+-	killall -q -HUP dbus-daemon || true
+ }
+diff --git a/meta/recipes-devtools/tcltk/tcl_8.6.0.bb b/meta/recipes-devtools/tcltk/tcl_8.6.0.bb
+index 8d4df30..102385d 100644
+--- a/meta/recipes-devtools/tcltk/tcl_8.6.0.bb
++++ b/meta/recipes-devtools/tcltk/tcl_8.6.0.bb
+@@ -65,6 +65,13 @@ tcl_sysroot_preprocess () {
+ 	sysroot_stage_dir ${D}${bindir_crossscripts} ${SYSROOT_DESTDIR}${bindir_crossscripts}
+ }
+ 
++tcl_postinst() {
++#!/bin/sh
++# post installation script
++
++ln -s ${D}/${libdir}/libtcl8.6.so  ${D}/${libdir}/libtcl.so
++}
++
+ PACKAGES =+ "tcl-lib"
+ FILES_tcl-lib = "${libdir}/libtcl8.6.so*"
+ FILES_${PN} += "${libdir}/tcl8.6 ${libdir}/tcl8"
+diff --git a/meta/recipes-graphics/libsdl/libsdl_1.2.15.bb b/meta/recipes-graphics/libsdl/libsdl_1.2.15.bb
+index 4209f37..5328efa 100644
+--- a/meta/recipes-graphics/libsdl/libsdl_1.2.15.bb
++++ b/meta/recipes-graphics/libsdl/libsdl_1.2.15.bb
+@@ -45,7 +45,8 @@ EXTRA_OECONF = "--disable-static --disable-debug --enable-cdrom --enable-threads
+                 --disable-video-svga \
+                 --disable-video-picogui --disable-video-qtopia --enable-dlopen \
+                 --disable-rpath \
+-                --disable-pulseaudio"
++                --disable-pulseaudio \
++                SDL_CONFIG=${STAGING_BINDIR_CROSS}/sdl-config"
+ 
+ PACKAGECONFIG ??= "${@base_contains('DISTRO_FEATURES', 'alsa', 'alsa', '', d)}"
+ PACKAGECONFIG[alsa] = "--enable-alsa --disable-alsatest,--disable-alsa,alsa-lib,"
+diff --git a/meta/recipes-graphics/libsdl2/libsdl2_2.0.0.bb b/meta/recipes-graphics/libsdl2/libsdl2_2.0.0.bb
+index f393e33..65c3a24 100644
+--- a/meta/recipes-graphics/libsdl2/libsdl2_2.0.0.bb
++++ b/meta/recipes-graphics/libsdl2/libsdl2_2.0.0.bb
+@@ -37,7 +37,8 @@ EXTRA_OECONF = "--disable-oss --disable-esd --disable-arts \
+                 ${@base_contains('DISTRO_FEATURES', 'x11', '--enable-video-x11', '--disable-video-x11', d)} \
+                 --enable-sdl-dlopen \
+                 --disable-rpath \
+-                --disable-pulseaudio"
++                --disable-pulseaudio \
++                SDL_CONFIG=${STAGING_BINDIR_CROSS}/sdl-config"
+ 
+ PACKAGECONFIG ??= "${@base_contains('DISTRO_FEATURES', 'alsa', 'alsa', '', d)}"
+ PACKAGECONFIG[alsa] = "--enable-alsa --disable-alsatest,--disable-alsa,alsa-lib,"
+diff --git a/meta/recipes-sato/matchbox-keyboard/files/80matchboxkeyboard.shbg b/meta/recipes-sato/matchbox-keyboard/files/80matchboxkeyboard.shbg
+deleted file mode 100755
+index 43c5d3e..0000000
+--- a/meta/recipes-sato/matchbox-keyboard/files/80matchboxkeyboard.shbg
++++ /dev/null
+@@ -1,23 +0,0 @@
+-#!/bin/sh
+-
+-. /etc/formfactor/config
+-
+-CMD=""
+-
+-if [ "$HAVE_KEYBOARD" = "0" ]; then
+-    CMD="matchbox-keyboard -d"
+-elif [ "$DISPLAY_CAN_ROTATE" = "1" ]; then
+-    if [ "$HAVE_KEYBOARD_PORTRAIT" = "1" -a "$HAVE_KEYBOARD_LANDSCAPE" = "0" ]; then
+-        CMD="matchbox-keyboard -d -o landscape"
+-    elif [ "$HAVE_KEYBOARD_LANDSCAPE" = "1" -a "$HAVE_KEYBOARD_PORTRAIT" = "0" ]; then
+-        CMD="matchbox-keyboard -d -o portrait"
+-    fi
+-fi
+-					
+-
+-if [ "$CMD" ]; then
+-    # Delay to make sure the window manager is active
+-    # by waiting for the desktop to say its finished loading
+-    dbus-wait org.matchbox_project.desktop Loaded
+-    exec $CMD
+-fi
+diff --git a/meta/recipes-sato/matchbox-keyboard/matchbox-keyboard_git.bb b/meta/recipes-sato/matchbox-keyboard/matchbox-keyboard_git.bb
+index ffcabca..a30f61c 100644
+--- a/meta/recipes-sato/matchbox-keyboard/matchbox-keyboard_git.bb
++++ b/meta/recipes-sato/matchbox-keyboard/matchbox-keyboard_git.bb
+@@ -17,7 +17,8 @@ PR = "r4"
+ SRC_URI = "git://git.yoctoproject.org/${BPN} \
+            file://configure_fix.patch;maxrev=1819 \
+            file://single-instance.patch \
+-           file://80matchboxkeyboard.shbg \
++           file://80matchboxkeyboard.sh \
++		   file://matchbox-keyboard-daemon.sh \
+            file://png-fix.patch"
+ 
+ S = "${WORKDIR}/git"
+@@ -43,7 +44,11 @@ FILES_${PN}-applet = "${libdir}/matchbox-panel/*.so"
+ 
+ do_install_append () {
+ 	install -d ${D}/${sysconfdir}/X11/Xsession.d/
+-	install -m 755 ${WORKDIR}/80matchboxkeyboard.shbg ${D}/${sysconfdir}/X11/Xsession.d/
++	install -m 755 ${WORKDIR}/80matchboxkeyboard.sh ${D}/${sysconfdir}/X11/Xsession.d/
++
++	install -d ${D}${bindir}
++	install -m 755 ${WORKDIR}/matchbox-keyboard-daemon.sh ${D}${bindir}/
++ 
+ 
+ 	rm -f ${D}${libdir}/gtk-2.0/*/immodules/*.la
+ 	rm -f ${D}${libdir}/matchbox-panel/*.la
