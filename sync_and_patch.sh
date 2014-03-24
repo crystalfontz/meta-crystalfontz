@@ -4,10 +4,10 @@ cd sources/poky
 git checkout yocto/dora
 git checkout bee7e3756adf70edaeabe9d43166707aab84f581
 git apply ../meta-crystalfontz/patches/poky_patch.patch
-cd ../meta-openembedded/meta-networking
+cd ../meta-openembedded
 git checkout eb4563b83be0a57ede4269ab19688af6baa62cd2
 cd ..
-git apply meta-crystalfontz/patches/meta-oe-php-url.patch
+git apply ../meta-crystalfontz/patches/meta-oe-php-url.patch
 cd ../meta-fsl-arm
 git checkout 2c1519020954dc76c51d9cd4006d7198121501b2
 cd ../meta-fsl-arm-extra
@@ -21,6 +21,11 @@ git checkout 5b5616b63bdf163ea3eb2ca8857c56a393435fe3
 cd ../meta-crystalfontz/patches
 cp 80matchboxkeyboard.sh ../../poky/meta/recipes-sato/matchbox-keyboard/files/
 cp matchbox-keyboard-daemon.sh ../../poky/meta/recipes-sato/matchbox-keyboard/files/
+if [ ! -d ../../../build ]; then
+	busybox ln -s /home/root/images/CFA10056_slideshow /home/root/images/slideshow.sh
+	echo creating slideshow symlink | tee /dev/kmsg > /dev/null
+fi
+
 mkdir ../../../build
 mkdir ../../../build/conf
 cp bblayers.conf ../../../build/conf/
