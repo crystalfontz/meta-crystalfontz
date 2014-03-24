@@ -1,5 +1,5 @@
 --- xiv-0.9/xiv.cpp
-+++ xiv-0.9_modified/xiv.cpp
++++ xiv-0.9/xiv.cpp
 @@ -101,6 +101,7 @@
  bool displayQuickview=true; // Display overview
  bool refresh=false; // Need a window refresh
@@ -19,15 +19,15 @@
        else if(0==strcmp(argv[i],"-no-overview"))
  	{
  	  displayQuickview=false;
-@@ -1655,6 +1655,11 @@ int main (int argc, char** argv)
-   bool leftdown=false;
-
-   run=true;
-+  if(slideshow==true)
-+  {
-+    usleep(5000);
-+       next_image(1);
-+  }
-
+@@ -1653,6 +1658,11 @@
+ 
    // Event Loop
-   do{
+   do{ 
++	if(slideshow==true)
++	  {
++	usleep(5000000);
++	next_image(1);
++	  }
+     XNextEvent(display,&event); 
+ 
+     MutexProtect mp(&mutexData);
