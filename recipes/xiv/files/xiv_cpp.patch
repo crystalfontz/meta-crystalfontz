@@ -25,8 +25,8 @@
    do{ 
 +	if(slideshow==true)
 +	  {
-+	usleep(5000000);
 +	next_image(1);
++	usleep(5000000);
 +	  }
      XNextEvent(display,&event); 
  
