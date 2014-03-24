@@ -1,2 +1,2 @@
 #!/bin/sh
-xiv -shuffle /home/root/images/800x480/horizontal/
+xiv -shuffle -slideshow /home/root/images/800x480/horizontal/
