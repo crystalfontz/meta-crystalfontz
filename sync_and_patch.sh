@@ -6,7 +6,6 @@ git checkout bee7e3756adf70edaeabe9d43166707aab84f581
 git apply ../meta-crystalfontz/patches/poky_patch.patch
 cd ../meta-openembedded
 git checkout eb4563b83be0a57ede4269ab19688af6baa62cd2
-cd ..
 git apply ../meta-crystalfontz/patches/meta-oe-php-url.patch
 cd ../meta-fsl-arm
 git checkout 2c1519020954dc76c51d9cd4006d7198121501b2
