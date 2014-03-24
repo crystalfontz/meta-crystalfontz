@@ -22,11 +22,10 @@ cd ../meta-crystalfontz/patches
 cp 80matchboxkeyboard.sh ../../poky/meta/recipes-sato/matchbox-keyboard/files/
 cp matchbox-keyboard-daemon.sh ../../poky/meta/recipes-sato/matchbox-keyboard/files/
 if [ ! -d ../../../build ]; then
-	busybox ln -s /home/root/images/CFA10056_slideshow /home/root/images/slideshow.sh
-	echo creating slideshow symlink | tee /dev/kmsg > /dev/null
-fi
-
 mkdir ../../../build
+fi
+if [ ! -d ../../../build/conf ]; then
 mkdir ../../../build/conf
+fi
 cp bblayers.conf ../../../build/conf/
 cp local.conf ../../../build/conf/
