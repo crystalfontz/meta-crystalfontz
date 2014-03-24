@@ -1,0 +1,34 @@
+--- xiv-0.9/xiv.cpp
++++ xiv-0.9_modified/xiv.cpp
+@@ -101,6 +101,7 @@
+ bool displayQuickview=true; // Display overview
+ bool refresh=false; // Need a window refresh
+ bool run=true; // Keeping running while it's true
++bool slideshow=false; // slideshow mode
+ 
+ // Histogram of current image
+ int histMax;
+@@ -1382,6 +1383,10 @@
+ 	{
+ 	  fullscreen=true;
+ 	}
++      else if(0==strcmp(argv[i],"-slideshow"))
++	{
++	  slideshow=true;
++	}
+       else if(0==strcmp(argv[i],"-no-overview"))
+ 	{
+ 	  displayQuickview=false;
+@@ -2104,7 +2109,11 @@
+       {
+ 	run=false;
+       }
+-
++	else if(slideshow==true)
++	{
++		usleep(5000);
++		next_image(1);
++	}
+   } while (run); 
+   
+   // Cleanup before leaving
