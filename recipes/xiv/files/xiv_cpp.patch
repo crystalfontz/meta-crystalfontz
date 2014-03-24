@@ -19,16 +19,15 @@
        else if(0==strcmp(argv[i],"-no-overview"))
  	{
  	  displayQuickview=false;
-@@ -2104,7 +2109,11 @@
-       {
- 	run=false;
-       }
--
-+	else if(slideshow==true)
-+	{
-+		usleep(5000);
-+		next_image(1);
-+	}
-   } while (run); 
-   
-   // Cleanup before leaving
+@@ -1655,6 +1655,11 @@ int main (int argc, char** argv)
+   bool leftdown=false;
+
+   run=true;
++  else if(slideshow==true)
++  {
++    usleep(5000);
++       next_image(1);
++  }
+
+   // Event Loop
+   do{
