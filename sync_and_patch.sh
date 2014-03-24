@@ -20,3 +20,4 @@ cd ../meta-crystalfontz/patches
 cp 80matchboxkeyboard.sh ../../poky/meta/recipes-sato/matchbox-keyboard/files/
 cp matchbox-keyboard-daemon.sh ../../poky/meta/recipes-sato/matchbox-keyboard/files/
 cp bblayers.conf ../../../build/conf/
+cp local.conf ../../../build/conf/
