@@ -2,9 +2,6 @@
 
 cd sources/poky
 git checkout bee7e3756adf70edaeabe9d43166707aab84f581
-#git apply ../meta-crystalfontz/patches/0001-kernel-use-oldnoconfig-instead-of-yes-make-oldconfig.patch
-#git apply ../meta-crystalfontz/patches/0002-matchbox-keyboard-daemonize-launch.patch
-#git apply ../meta-crystalfontz/patches/0003-wpa-supplicant-2.0-don-t-exit-in-pkg_postinst.patch
 git apply ../meta-crystalfontz/patches/poky_patch.patch
 cd ../meta-openembedded/meta-networking
 git checkout eb4563b83be0a57ede4269ab19688af6baa62cd2
@@ -18,3 +15,7 @@ cd ../meta-java
 git checkout 14d6ad1608c66b8970d4052dce4cd1fc64fb6ea2
 cd ../meta-qt5
 git checkout 5b5616b63bdf163ea3eb2ca8857c56a393435fe3
+cd ../meta-crystalfontz/patches
+cp 80matchboxkeyboard.sh ../../poky/meta/recipes-sato/matchbox-keyboard/files/
+cp matchbox-keyboard-daemon.sh ../../poky/meta/recipes-sato/matchbox-keyboard/files/
+cp bblayers.conf ../../../build/conf/
