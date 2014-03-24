@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd sources/poky
+git checkout yocto/dora
 git checkout bee7e3756adf70edaeabe9d43166707aab84f581
 git apply ../meta-crystalfontz/patches/poky_patch.patch
 cd ../meta-openembedded/meta-networking
