@@ -23,7 +23,7 @@
    bool leftdown=false;
 
    run=true;
-+  else if(slideshow==true)
++  if(slideshow==true)
 +  {
 +    usleep(5000);
 +       next_image(1);
