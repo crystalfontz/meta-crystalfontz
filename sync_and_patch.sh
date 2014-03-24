@@ -6,9 +6,9 @@ git checkout bee7e3756adf70edaeabe9d43166707aab84f581
 git apply ../meta-crystalfontz/patches/poky_patch.patch
 cd ../meta-openembedded/meta-networking
 git checkout eb4563b83be0a57ede4269ab19688af6baa62cd2
-cd ../../
+cd ..
 git apply meta-crystalfontz/patches/meta-oe-php-url.patch
-cd meta-fsl-arm
+cd ../meta-fsl-arm
 git checkout 2c1519020954dc76c51d9cd4006d7198121501b2
 cd ../meta-fsl-arm-extra
 git checkout 0512f5fd03033b8ab707fcc8624fac68b79a321d
