@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://COPYRIGHT;md5=daa273295f57ee294a0006e06131b4ad"
 
 PR = "r0"
 
-DEPENDS_${PN} = "virtual/libx11 jpeg tiff exif"
+DEPENDS = "virtual/libx11 jpeg tiff"
 
 SRC_URI = "http://downloads.sourceforge.net/project/xiv/xiv-0.9.tgz \
            file://xiv_cpp.patch \
