@@ -3,9 +3,9 @@ LICENSE = "MIT"
 
 PR = "pr8"
 
-IMAGE_INSTALL = "packagegroup-core-boot ${ROOTFS_PKGMANAGE_BOOTSTRAP} ${CORE_IMAGE_EXTRA_INSTALL}"
+#IMAGE_INSTALL = "packagegroup-core-boot ${ROOTFS_PKGMANAGE_BOOTSTRAP} ${CORE_IMAGE_EXTRA_INSTALL}"
 
-IMAGE_INSTALL += " linux-firmware kernel-modules init-ifupdown busybox-udhcpd iw libpng psplash"
+IMAGE_INSTALL += " linux-firmware kernel-modules init-ifupdown busybox-udhcpd iw libpng psplash ${CORE_IMAGE_EXTRA_INSTALL}"
 
 EXTRA_IMAGE_FEATURES += " \
     nfs-server \
