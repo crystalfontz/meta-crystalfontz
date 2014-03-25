@@ -16,8 +16,8 @@ SRC_URI[sha256sum] = "9eeb295ec640f09681f7b21ac045aaf7144d5d3b417f8d4c301bfa3887
 
 S = "${WORKDIR}/xiv-0.9"
 
-LDFLAGS += " -lz -L${STAGING_LIBDIR}"
-CFLAGS += "-lz -I${STAGING_INCDIR}"
+LDFLAGS += " -L${STAGING_LIBDIR}"
+CFLAGS += " -I${STAGING_INCDIR}"
 
 inherit autotools pkgconfig binconfig 
 
