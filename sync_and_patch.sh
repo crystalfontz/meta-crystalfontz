@@ -14,7 +14,7 @@ git checkout 0512f5fd03033b8ab707fcc8624fac68b79a321d
 cd ../meta-fsl-demos
 git checkout 430f524fd4113b703181c08f398465ba18d4396c
 cd ../meta-java
-git checkout 14d6ad1608c66b8970d4052dce4cd1fc64fb6ea2
+git checkout de06956f93ecd15d8c941a05da47a4425e3d397a
 cd ../meta-qt5
 git checkout 5b5616b63bdf163ea3eb2ca8857c56a393435fe3
 cd ../meta-crystalfontz/patches
