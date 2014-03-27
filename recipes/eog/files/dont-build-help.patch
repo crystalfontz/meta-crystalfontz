@@ -1,0 +1,11 @@
+--- eog-2.28.1/Makefile.am
++++ eog-2.28.1/Makefile_mod.am
+@@ -2,7 +2,7 @@
+ jpeg_DIRS = jpegutils
+ endif
+ 
+-SUBDIRS = $(jpeg_DIRS) cut-n-paste bindings src plugins po help data doc
++SUBDIRS = $(jpeg_DIRS) cut-n-paste bindings src plugins po data doc
+ 
+ EXTRA_DIST = 			\
+ 	HACKING			\

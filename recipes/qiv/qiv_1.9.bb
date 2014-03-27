@@ -2,7 +2,7 @@ DESCRIPTION = "Qiv is a very small and pretty fast gdk/Imlib image viewer."
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://README.COPYING;md5=0636e73ff0215e8d672dc4c32c317bb3"
 SECTION = "x11/graphics"
-DEPENDS = "gtk+ virtual/imlib2 virtual/libx11 gdk-2.0"
+DEPENDS = "gtk+ virtual/imlib2 virtual/libx11"
 PR = "r1"
 
 SRC_URI = "http://pkgs.fedoraproject.org/repo/pkgs/qiv/qiv-1.9-src.tgz/b368e00543b2b1d9a87b37fd5ba60c57/qiv-1.9-src.tgz \

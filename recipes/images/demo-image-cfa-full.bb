@@ -78,9 +78,17 @@ IMAGE_INSTALL += " \
     packagegroup-qt-in-use-demos \
     qt4-demos \
     qt4-examples \
+    qt4-embedded-plugin-mousedriver-tslib \
+    qt4-embedded-plugin-gfxdriver-gfxtransformed \
+    qt4-embedded-plugin-phonon-backend-gstreamer \
+    qt4-embedded-plugin-imageformat-gif \
+    qt4-embedded-plugin-imageformat-jpeg \
+    qt4-embedded-qml-plugins \
     cfa-config-extra \
 	tzdata \
 	xiv \
+	imagemagick \
+	eog \
 "
 
 # development / etc.
@@ -95,6 +103,7 @@ IMAGE_INSTALL += " \
 	screen \
 	libpng \
 	qt-creator \
+    packagegroup-qte-toolchain-target \
 "
 
 # low-level games support / games
