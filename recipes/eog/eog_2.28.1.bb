@@ -6,7 +6,7 @@ PR = "r2"
 
 DEPENDS = "gtk+ glib-2.0 gnome-desktop gnome-icon-theme shared-mime-info zlib libexif lcms jpeg dbus-glib libxml2 gconf libart-lgpl dconf gdk-pixbuf " 
 
-inherit gnome
+inherit gnome pkgconfig gtk-icon-cache gsettings
 
 SRC_URI = "https://download.gnome.org/sources/eog/2.28/eog-2.28.1.tar.bz2 \
 		   file://pointer_arithmetic.patch \
