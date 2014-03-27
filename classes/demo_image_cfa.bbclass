@@ -51,6 +51,9 @@ ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/init.d/smarthome ${IMAGE_R
 ROOTFS_POSTPROCESS_COMMAND += "mv ${IMAGE_ROOTFS}/etc/rcS.d/S00psplash.sh ${IMAGE_ROOTFS}/etc/rcS.d/S01psplash.sh;"
 ROOTFS_POSTPROCESS_COMMAND += "cp ${IMAGE_ROOTFS}/etc/rcS.d/S00cfa-preconfig.sh ${IMAGE_ROOTFS}/etc/init.d/cfa-preconfig.sh;"
 
+# make folder for eog
+ROOTFS_POSTPROCESS_COMMAND += "mkdir ${IMAGE_ROOTFS}/home/root/.gnome2/;"
+
 # deploy manifest files to the target
 ROOTFS_POSTPROCESS_COMMAND += "deploy_manifests"
 

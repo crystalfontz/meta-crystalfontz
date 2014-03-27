@@ -1,2 +1,2 @@
 #!/bin/sh
-xiv -shuffle -slideshow /home/root/images/800x480/horizontal/
+eog -s /home/root/images/800x480/horizontal
