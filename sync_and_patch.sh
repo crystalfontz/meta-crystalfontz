@@ -3,7 +3,6 @@
 chmod a+x setup-environment
 MACHINE=cfa100xx ./setup-environment build
 
-cd ..
 cd sources/poky
 git checkout yocto/dora
 git checkout bee7e3756adf70edaeabe9d43166707aab84f581
