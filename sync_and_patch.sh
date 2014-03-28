@@ -1,5 +1,8 @@
 #!/bin/bash
 
+MACHINE=cfa100xx setup-environment build
+
+cd ..
 cd sources/poky
 git checkout yocto/dora
 git checkout bee7e3756adf70edaeabe9d43166707aab84f581
@@ -36,3 +39,4 @@ if [ -d ../../../build/conf ]; then
 cp bblayers.conf ../../../build/conf/
 cp local.conf ../../../build/conf/
 fi
+
