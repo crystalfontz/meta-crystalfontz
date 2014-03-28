@@ -4,14 +4,20 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=94d55d512a9ba36caa9b7df079bae19f"
 
 PR = "r2"
 
-DEPENDS = "gtk+ glib-2.0 gnome-desktop gnome-icon-theme shared-mime-info zlib libexif lcms jpeg dbus-glib libxml2 gconf libart-lgpl dconf gdk-pixbuf " 
+DEPENDS = "gtk+ glib-2.0 gnome-desktop gnome-icon-theme shared-mime-info zlib libexif lcms jpeg dbus-glib libxml2 gconf libart-lgpl dconf gdk-pixbuf gsettings-desktop-schemas" 
+
+RDEPENDS_${PN} += " glib-2.0-utils dconf gconf gsettings-desktop-schemas gnome-desktop gtk+ shared-mime-info"
 
 inherit gnome pkgconfig gtk-icon-cache gsettings
 
 SRC_URI = "https://download.gnome.org/sources/eog/2.28/eog-2.28.1.tar.bz2 \
 		   file://pointer_arithmetic.patch \
 		   file://dont-build-help.patch \
+		   file://left-click-stop-slideshow.patch \
 "
+
+LDFLAGS += " -L${STAGING_LIBDIR}"
+CFLAGS += " -I${STAGING_INCDIR}"
 
 do_configure_prepend() {
     export HOST_SYS=${HOST_SYS}

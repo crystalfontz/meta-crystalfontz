@@ -67,6 +67,7 @@ IMAGE_INSTALL += " \
 	i2c-tools \
 	traceroute \
 	uvccapture \
+	xf86-input-evdev \
 "
 
 IMAGE_INSTALL += " \

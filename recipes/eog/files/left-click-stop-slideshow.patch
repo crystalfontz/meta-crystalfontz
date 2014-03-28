@@ -1,0 +1,15 @@
+--- a/src/eog-window.c
++++ b/src/eog-window.c
+@@ -4778,6 +4778,12 @@
+ 
+ 	if (event->type == GDK_BUTTON_PRESS) {
+ 		switch (event->button) {
++		case 1:
++			if (EOG_WINDOW (widget)->priv->mode == EOG_WINDOW_MODE_SLIDESHOW) {
++				eog_window_cmd_close_window (NULL, EOG_WINDOW (widget));
++				result = TRUE;
++			}
++			break;
+ 		case 6:
+ 			eog_thumb_view_select_single (EOG_THUMB_VIEW (window->priv->thumbview),
+ 						      EOG_THUMB_VIEW_SELECT_LEFT);
