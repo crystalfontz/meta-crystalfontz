@@ -40,4 +40,4 @@ cp bblayers.conf ../../../build/conf/
 cp local.conf ../../../build/conf/
 fi
 
-cd build
+cd ../../../build
