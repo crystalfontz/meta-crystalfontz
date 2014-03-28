@@ -1,7 +1,7 @@
 #!/bin/bash
 
 chmod a+x setup-environment
-MACHINE=cfa100xx setup-environment build
+MACHINE=cfa100xx ./setup-environment build
 
 cd ..
 cd sources/poky
