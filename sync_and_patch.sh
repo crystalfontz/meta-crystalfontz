@@ -42,5 +42,6 @@ cp bblayers.conf $filepath/build/conf/
 cp local.conf $filepath/build/conf/
 fi
 
-(cd $filepath/build)
 export PATH=$PATH:$filepath/sources/poky/bitbake/bin/
+
+cd $filepath/build
