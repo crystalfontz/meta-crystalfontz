@@ -20,6 +20,7 @@ for x in $CMDLINE; do
         echo "270" > /etc/rotation
         if [ -e /home/root/.configuration/xorg.conf_cfa10049 ]; then
         mv /home/root/.configuration/xorg.conf_cfa10049 /etc/X11/xorg.conf
+        mv /home/root/.configuration/01xrandr /etc/X11/Xinit.d/01xrandr
 		fi
         exit 0;
         ;;
@@ -31,6 +32,7 @@ for x in $CMDLINE; do
         echo "270" > /etc/rotation
         if [ -e /home/root/.configuration/xorg.conf_cfa10055 ]; then
         mv /home/root/.configuration/xorg.conf_cfa10055 /etc/X11/xorg.conf
+        mv /home/root/.configuration/01xrandr /etc/X11/Xinit.d/01xrandr
 		fi
         exit 0;
         ;;
