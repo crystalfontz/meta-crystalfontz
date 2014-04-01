@@ -22,6 +22,9 @@ for x in $CMDLINE; do
         cp /home/root/.configuration/xorg.conf_cfa10049 /etc/X11/xorg.conf
         cp /home/root/.configuration/01xrandr /etc/X11/Xinit.d/01xrandr
 		fi
+        if [ -e /home/root/.configuration/pointercal.xinput ]; then
+			mv /home/root/.configuration/pointercal.xinput /etc/pointercal.xinput
+		fi
         exit 0;
         ;;
     CFA-10055)
@@ -33,6 +36,10 @@ for x in $CMDLINE; do
         if [ -e /home/root/.configuration/xorg.conf_cfa10055 ]; then
         cp /home/root/.configuration/xorg.conf_cfa10055 /etc/X11/xorg.conf
         cp /home/root/.configuration/01xrandr /etc/X11/Xinit.d/01xrandr
+        mv /home/root/.configuration/pointercal.xinput /etc/pointercal.xinput
+		fi
+        if [ -e /home/root/.configuration/pointercal.xinput ]; then
+			mv /home/root/.configuration/pointercal.xinput /etc/pointercal.xinput
 		fi
         exit 0;
         ;;
