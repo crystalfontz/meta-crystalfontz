@@ -30,7 +30,6 @@ for x in $CMDLINE; do
         echo cfa-preconfig: Booting CFA-10049 | tee /dev/kmsg > /dev/null
         if [ -e /dev/fb1 ]; then
             cat /home/root/CFA10036_splash.bin > /dev/fb1
-			cp /home/root/.configuration/01xrandr /etc/X11/Xinit.d/01xrandr
         fi
         exit 0;
         ;;
@@ -38,7 +37,6 @@ for x in $CMDLINE; do
         echo cfa-preconfig: Booting CFA-10055 | tee /dev/kmsg > /dev/null
         if [ -e /dev/fb1 ]; then
             cat /home/root/CFA10036_splash.bin > /dev/fb1
-			cp /home/root/.configuration/01xrandr /etc/X11/Xinit.d/01xrandr
         fi
         exit 0;
         ;;
