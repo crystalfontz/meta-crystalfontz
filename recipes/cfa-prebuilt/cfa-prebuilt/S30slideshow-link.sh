@@ -19,8 +19,8 @@ for x in $CMDLINE; do
         fi
         echo "270" > /etc/rotation
         if [ -e /home/root/.configuration/xorg.conf_cfa10049 ]; then
-        mv /home/root/.configuration/xorg.conf_cfa10049 /etc/X11/xorg.conf
-        mv /home/root/.configuration/01xrandr /etc/X11/Xinit.d/01xrandr
+        cp /home/root/.configuration/xorg.conf_cfa10049 /etc/X11/xorg.conf
+        cp /home/root/.configuration/01xrandr /etc/X11/Xinit.d/01xrandr
 		fi
         exit 0;
         ;;
@@ -31,8 +31,8 @@ for x in $CMDLINE; do
         fi
         echo "270" > /etc/rotation
         if [ -e /home/root/.configuration/xorg.conf_cfa10055 ]; then
-        mv /home/root/.configuration/xorg.conf_cfa10055 /etc/X11/xorg.conf
-        mv /home/root/.configuration/01xrandr /etc/X11/Xinit.d/01xrandr
+        cp /home/root/.configuration/xorg.conf_cfa10055 /etc/X11/xorg.conf
+        cp /home/root/.configuration/01xrandr /etc/X11/Xinit.d/01xrandr
 		fi
         exit 0;
         ;;
@@ -43,7 +43,7 @@ for x in $CMDLINE; do
         fi
         echo "270" > /etc/rotation
         if [ -e /home/root/.configuration/xorg.conf_cfa10056 ]; then
-        mv /home/root/.configuration/xorg.conf_cfa10056 /etc/X11/xorg.conf
+        cp /home/root/.configuration/xorg.conf_cfa10056 /etc/X11/xorg.conf
         fi
         exit 0;
         ;;
@@ -54,7 +54,7 @@ for x in $CMDLINE; do
         fi
         echo "90" > /etc/rotation
         if [ -e /home/root/.configuration/xorg.conf_cfa10057 ]; then
-        mv /home/root/.configuration/xorg.conf_cfa10057 /etc/X11/xorg.conf
+        cp /home/root/.configuration/xorg.conf_cfa10057 /etc/X11/xorg.conf
 		fi
         exit 0;
         ;;
@@ -64,7 +64,7 @@ for x in $CMDLINE; do
             echo creating slideshow symlink | tee /dev/kmsg > /dev/null
         fi
         if [ -e /home/root/.configuration/xorg.conf_cfa10058 ]; then
-        mv /home/root/.configuration/xorg.conf_cfa10058 /etc/X11/xorg.conf
+        cp /home/root/.configuration/xorg.conf_cfa10058 /etc/X11/xorg.conf
 		fi
         exit 0;
         ;;
