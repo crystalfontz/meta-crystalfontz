@@ -85,6 +85,7 @@ IMAGE_INSTALL += " \
     qt4-embedded-plugin-imageformat-gif \
     qt4-embedded-plugin-imageformat-jpeg \
     qt4-embedded-qml-plugins \
+    qtserialport-e \
     cfa-config-extra \
 	tzdata \
 	xiv \
