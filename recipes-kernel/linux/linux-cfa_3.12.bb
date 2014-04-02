@@ -1,9 +1,12 @@
 include linux-cfa.inc
 
-PR = "r3"
+PR = "r4"
 
-SRC_BRANCH = "cfa-3.12.15"
-SRCREV = "3a0ea05548d2a4f7bc0da8f1723e2a9f7f43d2c2"
+SRC_BRANCH = "cfa-3.12.16"
+SRCREV = "33cc124832f2a6d1fc40ef63fad4c7055f98a001"
+
+#SRC_BRANCH = "cfa-3.12.15"
+#SRCREV = "3a0ea05548d2a4f7bc0da8f1723e2a9f7f43d2c2"
 
 #SRC_BRANCH = "cfa-3.12.14"
 #SRCREV = "6e2d67727fc07d822e70840e69f4bd3a02842aa2"
