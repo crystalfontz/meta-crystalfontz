@@ -17,7 +17,7 @@ git apply $filepath/sources/meta-crystalfontz/patches/meta-oe-php-url.patch
 cd $filepath/sources/meta-fsl-arm
 git checkout 2c1519020954dc76c51d9cd4006d7198121501b2
 cd $filepath/sources/meta-fsl-arm-extra
-git checkout 0512f5fd03033b8ab707fcc8624fac68b79a321d
+git checkout 4da77339853937b693aaca476bd81fbfc18db8b5
 cd $filepath/sources/meta-fsl-demos
 git checkout 430f524fd4113b703181c08f398465ba18d4396c
 cd $filepath/sources/meta-java
