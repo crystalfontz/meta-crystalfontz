@@ -14,6 +14,7 @@ cd $filepath/sources/meta-openembedded
 git checkout eb4563b83be0a57ede4269ab19688af6baa62cd2
 echo "applying patches to meta-openembedded repository"
 git apply $filepath/sources/meta-crystalfontz/patches/meta-oe-php-url.patch
+git apply $filepath/sources/meta-crystalfontz/patches/meta-oe-qtserialport-e.patch
 cd $filepath/sources/meta-fsl-arm
 git checkout 2c1519020954dc76c51d9cd4006d7198121501b2
 cd $filepath/sources/meta-fsl-arm-extra

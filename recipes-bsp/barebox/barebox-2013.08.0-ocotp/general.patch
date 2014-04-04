@@ -1,0 +1,8 @@
+--- a/arch/arm/boards/crystalfontz-cfa10036/env/init/general
++++ b/arch/arm/boards/crystalfontz-cfa10036/env/init/general
+@@ -9,4 +9,4 @@
+ global.autoboot_timeout=3
+ 
+ # default boot entry (one of /env/boot/*)
+-global.boot.default=mmc-ext3
++global.boot.default=mmc-ext4
