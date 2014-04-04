@@ -91,6 +91,7 @@ IMAGE_INSTALL += " \
 	xiv \
 	imagemagick \
 	eog \
+	ramboremote \
 "
 
 # development / etc.
