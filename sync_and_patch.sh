@@ -7,7 +7,6 @@ filepath=`pwd`
 
 cd $filepath/sources/poky
 git checkout yocto/dora
-git checkout bee7e3756adf70edaeabe9d43166707aab84f581
 echo "applying patches to yocto repository"
 git apply $filepath/sources/meta-crystalfontz/patches/poky_patch.patch
 cd $filepath/sources/meta-openembedded
