@@ -3,7 +3,7 @@ include linux-cfa.inc
 PR = "r4"
 
 SRC_BRANCH = "cfa-3.12.17"
-SRCREV = "65261bd5ad1f9e8d735cb52923d1a2b4906d2991"
+SRCREV = "2cbfe6e36266b82daac0a9e9aa92e0706e306411"
 
 #SRC_BRANCH = "cfa-3.12.16"
 #SRCREV = "33cc124832f2a6d1fc40ef63fad4c7055f98a001"
