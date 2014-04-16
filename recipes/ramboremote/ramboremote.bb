@@ -6,8 +6,8 @@ DEPENDS = "qtserialport-e"
 
 SRC_URI = "http://ftp.hostedftp.com/~baxsie/ramboremote/RamboRemote.tar.gz"
 
-SRC_URI[md5sum] = "7cef79598c25b0731d08ecf365b69e69"
-SRC_URI[sha256sum] = "df5a2442709c2ef769a7b5f637855db5098d09989806e060948619f62965cbdf"
+SRC_URI[md5sum] = "5733f9cbd3d56d50e2f008ae0ec02782"
+SRC_URI[sha256sum] = "1c89afe97925ecb457a4274d810c9f1e12def819b1763a288da70aa724d105d5"
 
 S = "${WORKDIR}/RamboRemote"
 
