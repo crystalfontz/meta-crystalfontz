@@ -63,7 +63,7 @@ IMAGE_INSTALL += " \
 	qtbase-plugins \
 "
 
-inherit core-image
+inherit core-image demo_image_cfa cfa_smart_config license image debian
 
 #	qtbase-plugins
 #	mesa-dev 

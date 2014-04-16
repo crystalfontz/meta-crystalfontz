@@ -9,5 +9,5 @@ IMAGE_INSTALL += " evtest tslib tslib-conf tslib-tests tslib-calibrate"
 
 IMAGE_LINGUAS = " "
 
-inherit core-image
+inherit core-image cfa_smart_config demo_image_cfa
 

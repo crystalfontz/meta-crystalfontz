@@ -1,5 +1,7 @@
 include recipes-sato/images/core-image-sato.bb
 
+inherit demo_image_cfa cfa_smart_config license image debian
+
 IMAGE_FEATURES += "debug-tweaks"
 WEB = "web-webkit"
 

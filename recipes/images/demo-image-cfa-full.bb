@@ -1,6 +1,6 @@
 include recipes-sato/images/core-image-sato.bb
 
-inherit demo_image_cfa license image debian
+inherit demo_image_cfa cfa_smart_config license image debian
 
 IMAGE_PREPROCESS_COMMAND = "rootfs_update_timestamp"
 
