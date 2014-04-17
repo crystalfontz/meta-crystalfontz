@@ -1,0 +1,7 @@
+include linux-cfa.inc
+
+SRC_BRANCH = "cfa-3.14.1"
+SRCREV = "7a6b190f6277994b794802363fdca3679040de92"
+
+COMPATIBLE_MACHINE = "cfa10036"
+
