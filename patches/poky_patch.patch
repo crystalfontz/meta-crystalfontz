@@ -75,7 +75,6 @@ index f393e33..65c3a24 100644
  PACKAGECONFIG[alsa] = "--enable-alsa --disable-alsatest,--disable-alsa,alsa-lib,"
 diff --git a/meta/recipes-sato/matchbox-keyboard/files/80matchboxkeyboard.shbg b/meta/recipes-sato/matchbox-keyboard/files/80matchboxkeyboard.shbg
 deleted file mode 100755
-index 43c5d3e..0000000
 --- a/meta/recipes-sato/matchbox-keyboard/files/80matchboxkeyboard.shbg
 +++ /dev/null
 @@ -1,23 +0,0 @@
@@ -140,7 +139,6 @@ index 0000000..2975cef
 +    exec $CMD
 +fi
 diff --git a/meta/recipes-sato/matchbox-keyboard/matchbox-keyboard_git.bb b/meta/recipes-sato/matchbox-keyboard/matchbox-keyboard_git.bb
-index ffcabca..a30f61c 100644
 --- a/meta/recipes-sato/matchbox-keyboard/matchbox-keyboard_git.bb
 +++ b/meta/recipes-sato/matchbox-keyboard/matchbox-keyboard_git.bb
 @@ -17,7 +17,8 @@ PR = "r4"
@@ -149,7 +147,7 @@ index ffcabca..a30f61c 100644
             file://single-instance.patch \
 -           file://80matchboxkeyboard.shbg \
 +           file://80matchboxkeyboard.sh \
-+		   file://matchbox-keyboard-daemon.sh \
++		    file://matchbox-keyboard-daemon.sh \
             file://png-fix.patch"
  
  S = "${WORKDIR}/git"
