@@ -11,21 +11,6 @@ index 61a6d10..644d793 100644
  }
  
  do_savedefconfig() {
-diff --git a/meta/recipes-connectivity/wpa-supplicant/wpa-supplicant-2.0.inc b/meta/recipes-connectivity/wpa-supplicant/wpa-supplicant-2.0.inc
-index ce669a1..94ca769 100644
---- a/meta/recipes-connectivity/wpa-supplicant/wpa-supplicant-2.0.inc
-+++ b/meta/recipes-connectivity/wpa-supplicant/wpa-supplicant-2.0.inc
-@@ -82,9 +82,7 @@ do_install () {
- 
- pkg_postinst_wpa-supplicant () {
- 	# If we're offline, we don't need to do this.
--	if [ "x$D" != "x" ]; then
--		exit 0
-+	if [ "x$D" = "x" ]; then
-+		killall -q -HUP dbus-daemon || true
- 	fi
-
- }
 diff --git a/meta/recipes-devtools/tcltk/tcl_8.6.0.bb b/meta/recipes-devtools/tcltk/tcl_8.6.0.bb
 index 8d4df30..102385d 100644
 --- a/meta/recipes-devtools/tcltk/tcl_8.6.0.bb
