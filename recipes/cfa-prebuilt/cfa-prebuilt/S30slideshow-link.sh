@@ -25,6 +25,10 @@ for x in $CMDLINE; do
         if [ -e /home/root/.configuration/pointercal.xinput ]; then
 			mv /home/root/.configuration/pointercal.xinput /etc/pointercal.xinput
 		fi
+		#really not the best place to do this, but why run a half dozen scripts on boot?
+        if [ -e /usr/share/applications/RamboRemote.desktop ]; then
+			rm /usr/share/applications/RamboRemote.desktop
+		fi
         exit 0;
         ;;
     CFA-10055)
@@ -41,6 +45,10 @@ for x in $CMDLINE; do
         if [ -e /home/root/.configuration/pointercal.xinput ]; then
 			mv /home/root/.configuration/pointercal.xinput /etc/pointercal.xinput
 		fi
+		#really not the best place to do this, but why run a half dozen scripts on boot?
+        if [ -e /usr/share/applications/RamboRemote.desktop ]; then
+			rm /usr/share/applications/RamboRemote.desktop
+		fi
         exit 0;
         ;;
     CFA-10056)
@@ -52,6 +60,10 @@ for x in $CMDLINE; do
         if [ -e /home/root/.configuration/xorg.conf_cfa10056 ]; then
         cp /home/root/.configuration/xorg.conf_cfa10056 /etc/X11/xorg.conf
         fi
+		#really not the best place to do this, but why run a half dozen scripts on boot?
+        if [ -e /home/root/.configuration/rambo_sh_cfa10056 ]; then
+			mv /home/root/.configuration/rambo_sh_cfa10056 /home/root/Test/Rambo.sh
+		fi
         exit 0;
         ;;
     CFA-10057)
@@ -62,6 +74,10 @@ for x in $CMDLINE; do
         echo "90" > /etc/rotation
         if [ -e /home/root/.configuration/xorg.conf_cfa10057 ]; then
         cp /home/root/.configuration/xorg.conf_cfa10057 /etc/X11/xorg.conf
+		fi
+		#really not the best place to do this, but why run a half dozen scripts on boot?
+        if [ -e /home/root/.configuration/rambo_sh_cfa10057 ]; then
+			mv /home/root/.configuration/rambo_sh_cfa10057 /home/root/Test/Rambo.sh
 		fi
         exit 0;
         ;;
