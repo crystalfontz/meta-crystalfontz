@@ -1,11 +1,10 @@
---- /dev/null
-+++ b/meta-openembedded/meta-oe/recipes-qt/qtserialport/qtserialport-e_5.2.1.bb
+diff --git a/meta-oe/recipes-qt/qtserialport/qtserialport-e_5.2.1.bb b/meta-oe/recipes-qt/qtserialport/qtserialport-e_5.2.1.bb
 new file mode 100644
 index 0000000..4105565
-@@ -0,0 +1,6 @@
+@@ -0,0 +1,5 @@
 +inherit qt4e
 +
 +require qtserialport.inc
 +
 +SRCREV = "29e526ad5c1e2fe0996ba0a776d83ec86f7197d7"
-+
+
