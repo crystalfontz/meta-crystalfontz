@@ -1,0 +1,26 @@
+diff --git a/meta/recipes-sato/matchbox-keyboard/matchbox-keyboard_git.bb b/meta/recipes-sato/matchbox-keyboard/matchbox-keyboard_git.bb
+--- a/meta/recipes-sato/matchbox-keyboard/matchbox-keyboard_git.bb
++++ b/meta/recipes-sato/matchbox-keyboard/matchbox-keyboard_git.bb
+@@ -17,7 +17,8 @@ PR = "r4"
+ SRC_URI = "git://git.yoctoproject.org/${BPN} \
+            file://configure_fix.patch;maxrev=1819 \
+            file://single-instance.patch \
+-           file://80matchboxkeyboard.shbg \
++           file://80matchboxkeyboard.sh \
++		    file://matchbox-keyboard-daemon.sh \
+            file://png-fix.patch"
+ 
+ S = "${WORKDIR}/git"
+@@ -43,7 +44,11 @@ FILES_${PN}-applet = "${libdir}/matchbox-panel/*.so"
+ 
+ do_install_append () {
+ 	install -d ${D}/${sysconfdir}/X11/Xsession.d/
+-	install -m 755 ${WORKDIR}/80matchboxkeyboard.shbg ${D}/${sysconfdir}/X11/Xsession.d/
++	install -m 755 ${WORKDIR}/80matchboxkeyboard.sh ${D}/${sysconfdir}/X11/Xsession.d/
++
++	install -d ${D}${bindir}
++	install -m 755 ${WORKDIR}/matchbox-keyboard-daemon.sh ${D}${bindir}/
++
+
+ 	rm -f ${D}${libdir}/gtk-2.0/*/immodules/*.la
+ 	rm -f ${D}${libdir}/matchbox-panel/*.la
