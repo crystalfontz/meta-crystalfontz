@@ -7,7 +7,7 @@ diff --git a/meta/recipes-sato/matchbox-keyboard/matchbox-keyboard_git.bb b/meta
             file://single-instance.patch \
 -           file://80matchboxkeyboard.shbg \
 +           file://80matchboxkeyboard.sh \
-+		    file://matchbox-keyboard-daemon.sh \
++           file://matchbox-keyboard-daemon.sh \
             file://png-fix.patch"
  
  S = "${WORKDIR}/git"

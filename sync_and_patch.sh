@@ -9,6 +9,7 @@ cd $filepath/sources/poky
 git checkout yocto/dora
 echo "applying patches to yocto repository"
 git apply $filepath/sources/meta-crystalfontz/patches/poky_patch.patch
+git apply $filepath/sources/meta-crystalfontz/patches/matchbox-keyboard-recipe.patch
 cd $filepath/sources/meta-openembedded
 git checkout eb4563b83be0a57ede4269ab19688af6baa62cd2
 echo "applying patches to meta-openembedded repository"
