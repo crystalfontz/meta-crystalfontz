@@ -24,8 +24,7 @@ index ce669a1..94ca769 100644
 +	if [ "x$D" = "x" ]; then
 +		killall -q -HUP dbus-daemon || true
  	fi
--
--	killall -q -HUP dbus-daemon || true
+
  }
 diff --git a/meta/recipes-devtools/tcltk/tcl_8.6.0.bb b/meta/recipes-devtools/tcltk/tcl_8.6.0.bb
 index 8d4df30..102385d 100644
