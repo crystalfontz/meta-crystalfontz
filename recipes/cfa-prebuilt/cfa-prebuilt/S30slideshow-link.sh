@@ -59,7 +59,7 @@ for x in $CMDLINE; do
         echo "270" > /etc/rotation
         if [ -e /home/root/.configuration/xorg.conf_cfa10056 ]; then
         cp /home/root/.configuration/xorg.conf_cfa10056 /etc/X11/xorg.conf
-        cp /home/root/.configuration/session /etc/matchbox/session
+        cp /home/root/.configuration/session_cfa10056 /etc/matchbox/session
         fi
 		#really not the best place to do this, but why run a half dozen scripts on boot?
         if [ -e /home/root/.configuration/rambo_sh_cfa10056 ]; then
