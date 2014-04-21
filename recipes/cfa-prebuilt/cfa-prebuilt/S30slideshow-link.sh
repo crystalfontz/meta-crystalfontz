@@ -64,6 +64,7 @@ for x in $CMDLINE; do
 		#really not the best place to do this, but why run a half dozen scripts on boot?
         if [ -e /home/root/.configuration/rambo_sh_cfa10056 ]; then
 			mv /home/root/.configuration/rambo_sh_cfa10056 /home/root/Test/Rambo.sh
+			rm /usr/share/applications/xinput_calibrator.desktop
 		fi
         exit 0;
         ;;
