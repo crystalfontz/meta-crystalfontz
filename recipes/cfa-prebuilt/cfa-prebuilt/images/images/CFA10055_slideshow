@@ -1,4 +1,4 @@
 #!/bin/sh
-eog -s /home/root/images/320x480/Horizontal
+eog -s /home/root/images/320x480/vertical
 
 
