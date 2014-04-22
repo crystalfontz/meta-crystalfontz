@@ -34,17 +34,17 @@ for x in $CMDLINE; do
     CFA-10055)
         if [ ! -L /home/root/images/slideshow.sh ]; then
             busybox ln -s /home/root/images/CFA10055_slideshow /home/root/images/slideshow.sh
-#            echo creating slideshow symlink | tee /dev/kmsg > /dev/null
-#        fi
-#        echo "270" > /etc/rotation
-#        if [ -e /home/root/.configuration/xorg.conf_cfa10055 ]; then
-#        cp /home/root/.configuration/xorg.conf_cfa10055 /etc/X11/xorg.conf
-#        cp /home/root/.configuration/01xrandr /etc/X11/Xinit.d/01xrandr
-#        mv /home/root/.configuration/pointercal.xinput /etc/pointercal.xinput
-#		fi
-#        if [ -e /home/root/.configuration/pointercal.xinput ]; then
-#			mv /home/root/.configuration/pointercal.xinput /etc/pointercal.xinput
-#		fi
+            echo creating slideshow symlink | tee /dev/kmsg > /dev/null
+        fi
+        echo "270" > /etc/rotation
+        if [ -e /home/root/.configuration/xorg.conf_cfa10055 ]; then
+        cp /home/root/.configuration/xorg.conf_cfa10055 /etc/X11/xorg.conf
+        cp /home/root/.configuration/01xrandr /etc/X11/Xinit.d/01xrandr
+        mv /home/root/.configuration/pointercal.xinput /etc/pointercal.xinput
+		fi
+        if [ -e /home/root/.configuration/pointercal.xinput ]; then
+			mv /home/root/.configuration/pointercal.xinput /etc/pointercal.xinput
+		fi
 		#really not the best place to do this, but why run a half dozen scripts on boot?
         if [ -e /usr/share/applications/RamboRemote.desktop ]; then
 			rm /usr/share/applications/RamboRemote.desktop
