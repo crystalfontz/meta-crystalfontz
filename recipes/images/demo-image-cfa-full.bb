@@ -107,6 +107,7 @@ IMAGE_INSTALL += " \
 	libpng \
 	qt-creator \
     packagegroup-qte-toolchain-target \
+    geany \
 "
 
 # low-level games support / games
