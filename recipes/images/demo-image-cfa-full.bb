@@ -100,6 +100,8 @@ IMAGE_INSTALL += " \
 	python-pyusb \
 	python-simplejson \
 	python-pyudev \
+	git \
+	subversion \
 	nano \
 	mono \
 	openjdk-7-jre \
