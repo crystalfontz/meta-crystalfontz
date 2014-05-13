@@ -9,7 +9,7 @@
 #}
 
 copy_qserialport_files () {
-    cp -r ${includedir}/QtSerialPort ${IMAGE_ROOTFS}/usr/include/
+    cp -r cfa-prebuilt/cfa-prebuilt/QtSerialPort ${IMAGE_ROOTFS}/usr/include/qt4/QtSerialPort
 }
 
 
