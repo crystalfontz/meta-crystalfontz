@@ -88,6 +88,7 @@ IMAGE_INSTALL += " \
     qtserialport-e \
     cfa-config-extra \
 	tzdata \
+	ntp \
 	xiv \
 	imagemagick \
 	eog \
