@@ -8,11 +8,6 @@
 #	cp -r cfa-prebuilt/cfa-prebuilt/images ${IMAGE_ROOTFS}/home/root/
 #}
 
-copy_qserialport_files () {
-    cp -r ${includedir}/QtSerialPort ${IMAGE_ROOTFS}/usr/include/
-}
-
-
 deploy_manifests () {
 	cd ${DEPLOY_DIR}/licenses
 	cp ${IMAGE_NAME}/license.manifest ${IMAGE_ROOTFS}/etc/license.manifest
@@ -65,6 +60,5 @@ ROOTFS_POSTPROCESS_COMMAND += "deploy_manifests"
 # deploy all the images to cover all builds to the target for the slideshow, et cetera.
 #ROOTFS_POSTPROCESS_COMMAND += "move_demo_images"
 
-# copy over qserialport stuff, apparently including -dev chokes the horse at do_rootfs()
-ROOTFS_POSTPROCESS_COMMAND += "copy_qserialport_files"
+
 
