@@ -24,6 +24,7 @@ SRC_URI += "file://doom.sh \
 			file://doom.desktop \
 			file://doom.png \
 			file://images/* \
+			file://QtSerialPort/* \
 			file://configuration/* \
 			file://slideshow.desktop \
 			file://S00cfa-preconfig.sh \
@@ -40,6 +41,8 @@ do_install () {
     install -d ${D}/etc/rcS.d
     install -d ${D}/${prefix}/games
     install -d ${D}/home/root/images
+    install -d ${D}/usr/include/qt4
+    install -d ${D}/usr/include/qt4/QtSerialPort
     install -d ${D}/home/root/.configuration
     install -m 0755 ${WORKDIR}/doom.sh ${D}${bindir}
     install -m 0755 ${WORKDIR}/touchtokillslideshow.py ${D}${bindir}
@@ -56,6 +59,7 @@ do_install () {
     install -m 0644 ${WORKDIR}/reboot_icon.png ${D}/${datadir}/pixmaps/
     cp -r ${FILE_DIRNAME}/${BPN}/configuration/* ${D}/home/root/.configuration/
     cp -r ${FILE_DIRNAME}/${BPN}/images/* ${D}/home/root
+    cp -r ${FILE_DIRNAME}/${BPN}/QtSerialPort ${D}/usr/include/qt4/QtSerialPort
 }
 
 FILES_${PN} += "/usr/share/*"
