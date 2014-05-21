@@ -77,8 +77,9 @@ IMAGE_INSTALL += " \
     fbv \
     minicom \
     packagegroup-qt-in-use-demos \
-    qt4-demos \
-    qt4-examples \
+    qt4-embedded-demos \
+    qt4-embedded-examples \
+    qt4-embedded-dev \
     qt4-embedded-plugin-mousedriver-tslib \
     qt4-embedded-plugin-gfxdriver-gfxtransformed \
     qt4-embedded-plugin-phonon-backend-gstreamer \
@@ -86,6 +87,7 @@ IMAGE_INSTALL += " \
     qt4-embedded-plugin-imageformat-jpeg \
     qt4-embedded-qml-plugins \
     qtserialport-e \
+    qtserialport-e-dev \
     cfa-config-extra \
 	tzdata \
 	ntp \
@@ -108,8 +110,7 @@ IMAGE_INSTALL += " \
 	openjdk-7-jre \
 	screen \
 	libpng \
-	qt-creator \
-    packagegroup-qte-toolchain-target \
+	packagegroup-qte-toolchain-target \
     geany \
 "
 

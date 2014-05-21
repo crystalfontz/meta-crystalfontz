@@ -59,12 +59,14 @@ do_install () {
     install -m 0644 ${WORKDIR}/reboot_icon.png ${D}/${datadir}/pixmaps/
     cp -r ${FILE_DIRNAME}/${BPN}/configuration/* ${D}/home/root/.configuration/
     cp -r ${FILE_DIRNAME}/${BPN}/images/* ${D}/home/root
-    cp -r ${FILE_DIRNAME}/${BPN}/QtSerialPort ${D}/usr/include/qt4/QtSerialPort
+    echo "hello world"
+    cp -r ${FILE_DIRNAME}/${BPN}/QtSerialPort/* ${D}/usr/include/qt4/QtSerialPort/
 }
 
 FILES_${PN} += "/usr/share/*"
 FILES_${PN} += "/usr/games/*/*"
 FILES_${PN} += "/usr/games"
+FILES_${PN} += "/usr/include/qt4/QtSerialPort/*"
 FILES_${PN} += "/home/root/.configuration/*"
 FILES_${PN} += "/home/root/images/*"
 FILES_${PN} += "/home/root/*"
