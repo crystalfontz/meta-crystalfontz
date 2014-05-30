@@ -77,6 +77,7 @@ IMAGE_INSTALL += " \
     fbv \
     minicom \
     packagegroup-qt-in-use-demos \
+    qtserialport-e-dev \
     qt4-embedded-demos \
     qt4-embedded-examples \
     qt4-embedded-dev \
@@ -86,8 +87,6 @@ IMAGE_INSTALL += " \
     qt4-embedded-plugin-imageformat-gif \
     qt4-embedded-plugin-imageformat-jpeg \
     qt4-embedded-qml-plugins \
-    qtserialport-e \
-    qtserialport-e-dev \
     cfa-config-extra \
 	tzdata \
 	ntp \
@@ -112,6 +111,49 @@ IMAGE_INSTALL += " \
 	libpng \
 	packagegroup-qte-toolchain-target \
     geany \
+	libqt-embedded3support4-dev \
+	libqt-embeddedclucene4-dev \
+	libqt-embeddedcore4-dev \
+	libqt-embeddeddbus4-dev \
+	libqt-embeddeddeclarative4-dev \
+	libqt-embeddeddesigner4-dev \
+	libqt-embeddeddesignercomponents4-dev \
+	libqt-embeddedgui4-dev \
+	libqt-embeddedhelp4-dev \
+	libqt-embeddedmultimedia4-dev \
+	libqt-embeddednetwork4-dev \
+	libqt-embeddedphonon4-dev \
+	libqt-embeddedscript4-dev \
+	libqt-embeddedscripttools4-dev \
+	libqt-embeddedsql4-dev \
+	libqt-embeddedsvg4-dev \
+	libqt-embeddedtest4-dev \
+	libqt-embeddeduitools4-dev \
+	libqt-embeddedwebkit4-dev \
+	libqt-embeddedxml4-dev \
+	libqt-embeddedxmlpatterns4-dev \
+	libqt3support4-dev \
+	libqtclucene4-dev \
+	libqtcore4-dev \
+	libqtdbus4-dev \
+	libqtdeclarative4-dev \
+	libqtdesigner4-dev \
+	libqtdesignercomponents4-dev \
+	libqtgui4-dev \
+	libqthelp4-dev \
+	libqtmultimedia4-dev \
+	libqtnetwork4-dev \
+	libqtopengl4-dev \
+	libqtphonon4-dev \
+	libqtscript4-dev \
+	libqtscripttools4-dev \
+	libqtsql4-dev \
+	libqtsvg4-dev \
+	libqttest4-dev \
+	libqtuitools4-dev \
+	libqtwebkit4-dev \
+	libqtxml4-dev \
+	libqtxmlpatterns4-dev \
 "
 
 # low-level games support / games
