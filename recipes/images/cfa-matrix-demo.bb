@@ -29,7 +29,6 @@ IMAGE_LINGUAS = " "
 IMAGE_INSTALL += " \
 	maliit-framework \
 	maliit-plugins \
-	maliit-inputcontext-qt4 \
     cpufrequtils \
     nano \
     packagegroup-core-qt4e \
@@ -64,15 +63,3 @@ IMAGE_INSTALL += " \
 "
 
 inherit core-image demo_image_cfa cfa_smart_config license image debian
-
-#	qtbase-plugins
-#	mesa-dev 
-#	icu 
-#	qtwebkit-examples 
-#	qtwebkit-examples-examples 
-#	qtdeclarative 
-#   packagegroup-qt-in-use-demos
-#   libqtopengl4-dev 
-#	clutter-1.0 
-#	glew 
-#	qtwayland 
