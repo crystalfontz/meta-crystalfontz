@@ -20,6 +20,7 @@ EXTRA_IMAGE_FEATURES += " \
 	tools-profile \
 	dev-pkgs \
 	tools-sdk \
+    tools-testapps \
 "
 
 # splash screen, process management 
@@ -54,6 +55,27 @@ IMAGE_INSTALL += " \
 	mosh \
 "
 
+# Testing/benchmarking
+IMAGE_INSTALL += " \
+	bonnie-scripts \
+	dbench \
+	iperf \
+	lmbench \
+	memtester \
+	nbench-byte \
+	ethtool \
+	traceroute \
+	sysstat \
+	stat \
+	ltp \
+	pv \
+	tcpdump \
+	inetutils \
+	netcat \
+"
+
+
+
 # Hardware related
 IMAGE_INSTALL += " \
 	evtest \ 
@@ -65,7 +87,6 @@ IMAGE_INSTALL += " \
     cpufrequtils \
 	devmem2 \
 	i2c-tools \
-	traceroute \
 	uvccapture \
 	xf86-input-evdev \
 "
@@ -91,7 +112,6 @@ IMAGE_INSTALL += " \
 	tzdata \
 	ntp \
 	xiv \
-	imagemagick \
 	eog \
 	ramboremote \
 "
